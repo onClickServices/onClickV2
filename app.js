@@ -52,21 +52,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Fetch index page
 app.get('/', (req, res) => {
     res.render('index', {
-        title: 'onClick | other'
+        title: messages.title.translation_0
     });
 });
 
 // Fetch services page
 app.get('/services', (req, res) => {
     res.render('services', {
-        title: 'onClick | Services'
+        title: messages.title.translation_1
     });
 });
 
 // Fetch contact
 app.get('/contact', (req, res) => {
     res.render('contact', {
-        title: 'onClick | Contact',
+        title: messages.title.translation_2,
         contactFirstName: messages.contact.translation_0,
         contactLastName: messages.contact.translation_1,
         contactPhone: messages.contact.translation_3,
@@ -76,7 +76,7 @@ app.get('/contact', (req, res) => {
 });
 
 // Retrieve contact information
-app.post('/registration', (req, res) => {
+app.post('/contact', (req, res) => {
     let user = new User();
     user.firstName = req.body.firstName;
     user.lastName = req.body.lastName;
@@ -86,7 +86,9 @@ app.post('/registration', (req, res) => {
     user.save((err) => {
         if (err) {
             // Send them to error page
-           res.redirect('/error');
+           res.redirect('/error', {
+               title: messages.title.translation_4
+           });
         } else {
             res.redirect('/thanks');
         }
@@ -95,7 +97,7 @@ app.post('/registration', (req, res) => {
 
 app.get('/thanks', (req, res) => {
     res.render('thanks', {
-        title: 'onClick | Thank you',
+        title: messages.title.translation_3,
         header: 'Thank you for contacting onClick',
         body: 'Please expect a call from us within 24 hrs'
     });
