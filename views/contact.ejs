@@ -1,0 +1,60 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!--Font Awesome-->
+
+</head>
+
+<title> <%= title %> </title>
+
+<% include partials/navbar.ejs%>
+
+<div class="text-center"><h3>Register Here</h3></div>
+
+<div class="container">
+
+    <form action="/registration" method="POST" id="signup" class="square">
+
+        </br>
+
+        <div class="form-group fieldset contact">
+            <label for=""><%= contactFirstName %></label>
+            <input type="text" placeholder="First name" class="form-control" name="firstName" autofocus required>
+        </div>
+
+        <div class="form-group fieldset contact">
+            <label for=""><%= contactLastName %></label>
+            <input type="text" placeholder="Last name" class="form-control" name="lastName" required>
+        </div>
+
+        <div class="form-group fieldset contact">
+            <label for=""><%= contactPhone %></label>
+            <input type="text" placeholder="555-555-0123" class="form-control" name="phone" required>
+        </div>
+
+        <div class="form-group fieldset contact">
+            <label for=""><%= contactEmail %></label>
+            <input type="text" placeholder="Someone@onclick.com" class="form-control" name="email">
+        </div>
+
+        <div class="form-group fieldset contact">
+            <label for=""><%= contactMessage %></label>
+            <input type="textArea" placeholder="Someone@onclick.com" class="form-control" name="message">
+        </div>
+
+        </br>
+
+        <div class="form-group fieldset">
+            <button class="btn btn-primary" type="submit">Next</button>
+        </div>
+    </form>
+</div>
+
+<% include partials/footer.ejs %>
