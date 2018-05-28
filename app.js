@@ -16,16 +16,16 @@ let User = require('./lib/models/user');
 
 // Database connection and error checking
 // Comment out the following lines of code to connect to the database
-// mongoose.connect(server.dbConfig.dbPort);
-// let db = mongoose.connection;
-//
-// db.on('connected', () => {
-//     log(messages.db.translation_1);
-// });
-//
-// db.on('error', (err) => {
-//     log(messages.db.translation_0 + err)
-// });
+mongoose.connect(server.dbConfig.dbHost + server.dbConfig.dbName);
+let db = mongoose.connection;
+
+db.on('connected', () => {
+    log(messages.db.translation_1 + messages.db.translation_2 + server.dbConfig.dbName);
+});
+
+db.on('error', (err) => {
+    log(messages.db.translation_0 + err)
+});
 
 // Server port listen
 app.listen(server.config.port, (err) => {

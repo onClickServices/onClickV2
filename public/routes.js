@@ -1,6 +1,7 @@
 let express = require('express');
 let router = express.Router();
-let messages = require('../lib/typings/text')
+let messages = require('../lib/typings/text');
+let User = require('../lib/models/user')
 
 // Fetch index page
 router.get('/', (req, res) => {
@@ -83,10 +84,9 @@ router.post('/contact', (req, res) => {
     user.message = req.body.message;
     user.save((err) => {
         if (err) {
+        console.log("this is the user: " + user)
             // Send them to error page
-            res.redirect('/error', {
-                title: messages.title.translation_4
-            });
+            res.redirect('/error');
         } else {
             res.redirect('/thanks');
         }
@@ -101,4 +101,32 @@ router.get('/thanks', (req, res) => {
     });
 });
 
-module.exports = router
+router.get('/portfolio', (req, res) => {
+   res.render('portfolio', {
+       title: messages.title.translation_5
+   });
+});
+
+router.get('/error', (req, res) => {
+   res.render('error', {
+       title: messages.title.translation_4,
+       errorMessage: messages.title.translation_4,
+       messageToUser: messages.error.translation_0
+   });
+});
+
+router.get('/registered', (req, res) => {
+    User.find({}, (err, user) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('registered', {
+                title: messages.pages.registered.translation_0,
+                header: messages.pages.registered.translation_1,
+                user: user
+            });
+        }
+    });
+});
+
+module.exports = router;
