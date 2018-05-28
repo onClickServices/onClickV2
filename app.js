@@ -18,7 +18,8 @@ const LocalStrategy = require('passport-local').Strategy;
 let log = console.log;
 
 const messages = require('./lib/typings/text');
-let User = require('./lib/models/user');
+
+let adminUser = require('./lib/models/admin')
 
 // Database connection and error checking
 // Comment out the following lines of code to connect to the database
@@ -34,7 +35,7 @@ db.on('error', (err) => {
 });
 
 // Server port listen
-app.listen(server.config.port, (err) => {
+app.listen(process.env.PORT || server.config.port, (err) => {
     if (err) {
         log(messages.server.translation_0 + server.config.port);
     } else {
@@ -46,14 +47,44 @@ app.listen(server.config.port, (err) => {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// Set public folder to static
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Body parser middleware //
-// parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: false}));
 
 // parse application/json
 app.use(bodyParser.json());
+app.use(cookieParser());
 
-// Set public folder to static
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+    secret: server.dbConfig.secret,
+    saveUniitialized: true,
+    resave: true
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+// app.use(expressValidator({
+//     errorFormatter: (param, msg, value) => {
+//         let namespace = parm.split('.'),
+//             root = namespace.shift(),
+//             formParam = root;
+//         while(namespace.length) {
+//             formParam += '[' + namespace.shift() + ']';
+//         }
+//         return {
+//             param: formParam,
+//             msg: msg,
+//             value: value
+//         }
+//     }
+// }));
+
+app.use(flash());
+
+
 
 app.use('/', routes);
+// app.use('/admin', adminUser);

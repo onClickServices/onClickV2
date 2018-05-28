@@ -2,8 +2,26 @@ let express = require('express');
 let router = express.Router();
 let messages = require('../lib/typings/text');
 let User = require('../lib/models/user');
+let Admin = require('../lib/models/admin');
+const expressValidator = require('express-validator');
 
 
+//
+// router.use(expressValidator({
+//     errorFormatter: (param, msg, value) => {
+//         let namespace = parm.split('.'),
+//             root = namespace.shift(),
+//             formParam = root;
+//         while(namespace.length) {
+//             formParam += '[' + namespace.shift() + ']';
+//         }
+//         return {
+//             param: formParam,
+//             msg: msg,
+//             value: value
+//         }
+//     }
+// }));
 
 // Fetch index page
 router.get('/', (req, res) => {
@@ -170,5 +188,58 @@ router.get('/details', (req, res) => {
         }
     });
 });
+
+router.get('/adminRegister', (req, res) => {
+   res.render('adminRegister', {
+       title: messages.pages.site.title.translation_10,
+       adminRegFirstName: messages.pages.admin.translation_0,
+       adminRegLastName: messages.pages.admin.translation_1,
+       adminUsername: messages.pages.admin.translation_2,
+       adminRegPassword: messages.pages.admin.translation_3,
+       adminRegPasswordConfirm: messages.pages.admin.translation_5,
+   });
+});
+router.post('/adminRegister', (req, res) => {
+    let admin = new Admin();
+        admin.firstName = req.body.adminFirstName;
+        admin.lastName = req.body.adminLastName;
+        admin.username = req.body.adminUsername;
+        admin.password = req.body.adminPassword;
+        let adminConfirmPassword = req.body.adminPasswordConfirm;
+            let NewAdmin = new Admin({
+                adminFirstName : adminFirstName,
+                adminLastName: adminLastName,
+                adminUsername: adminUsername,
+                adminPassword: adminPassword
+            });
+    user.save((err) => {
+        if (err) {
+            console.log("this is the user: " + user)
+            // Send them to error page
+            res.redirect('/error');
+        } else {
+            res.redirect('/thanks');
+        }
+    });
+});
+
+router.get('/adminLogin', (req, res) => {
+   res.render('adminLogin', {
+       title: messages.pages.site.title.translation_11,
+       pageTitle: messages.pages.admin.translation_4,
+       adminLoginUsername: messages.pages.admin.translation_2,
+       adminLoginPassword: messages.pages.admin.translation_3
+   })
+});
+
+
+router.use((req, res, next) => {
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
+    next();
+});
+
+
 
 module.exports = router;

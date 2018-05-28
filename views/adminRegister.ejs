@@ -1,0 +1,56 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!--Font Awesome-->
+
+</head>
+
+<title> <%= title %> </title>
+
+<% include partials/navbar.ejs%>
+
+<div class="container text-center">
+    <h1 class="lead display-3"><%= pageTitle %></h1>
+</div>
+
+<!-- Work on messaging -->
+
+
+<div class="container">
+
+    <form action="/adminRegister" method="POST" id="contactPage" class="form">
+
+        </br>
+
+        <div class="form-group fieldset contact">
+            <label for=""><%= adminRegFirstName %></label>
+            <input type="text" class="form-control mb-2"  placeholder="First name"   name="adminFirstName" required autofocus>
+        </div>
+
+        <div class="form-group fieldset contact">
+            <label for=""><%= adminRegLastName %></label>
+            <input type="text" class="form-control mb-2"  placeholder="Last name"  name="adminLastName" required>
+        </div>
+
+        <div class="form-group fieldset contact">
+            <label for=""><%= adminRegPassword %></label>
+            <input type="password" class="form-control mb-2"  placeholder="Password"   name="adminPassword" required>
+        </div>
+        <div class="form-group fieldset contact">
+            <label for=""><%= adminRegPasswordConfirm %></label>
+            <input type="password" class="form-control mb-2"  placeholder="Confirm Password"  name="adminPasswordConfirm" required>
+        </div>
+        </br>
+
+        <div class="form-group fieldset">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
