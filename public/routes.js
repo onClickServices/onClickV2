@@ -105,7 +105,7 @@ router.post('/contact', (req, res) => {
     user.message = req.body.message;
     user.save((err) => {
         if (err) {
-        console.log("this is the user: " + user)
+        console.log("this is the user: " + user);
             // Send them to error page
             res.redirect('/error');
         } else {
@@ -192,6 +192,7 @@ router.get('/details', (req, res) => {
 router.get('/adminRegister', (req, res) => {
    res.render('adminRegister', {
        title: messages.pages.site.title.translation_10,
+       pageTitle: messages.pages.site.title.translation_12,
        adminRegFirstName: messages.pages.admin.translation_0,
        adminRegLastName: messages.pages.admin.translation_1,
        adminUsername: messages.pages.admin.translation_2,
@@ -212,13 +213,13 @@ router.post('/adminRegister', (req, res) => {
                 adminUsername: adminUsername,
                 adminPassword: adminPassword
             });
-    user.save((err) => {
+    admin.save((err) => {
         if (err) {
-            console.log("this is the user: " + user)
+            console.log("this is the user: " + user);
             // Send them to error page
             res.redirect('/error');
         } else {
-            res.redirect('/thanks');
+            res.redirect('/login');
         }
     });
 });
