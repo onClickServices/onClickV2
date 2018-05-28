@@ -9,30 +9,28 @@
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="../assets/css/styles.css">
     <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-    <title><%= title %></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <!-- Editor -->
+    <script src="//cdn.ckeditor.com/4.9.2/full/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'editor1' );
+    </script>
 </head>
 
+<title><%= title %></title>
 <body>
 
     <% include ./partials/navbar.ejs %>
-
-    <!-- Header -->
-
-    <header>
-        <div class="container">
-            <div class="intro-text text-center">
-                <div class="intro-heading">Web Services</div>
-                <div class="intro-lead-in"><h2 class="sub-heading">Get your ideas to the world faster</h2></div>
-                <a href="/registration" class="page-scroll btn btn-xl">Contact us now</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- End of header -->
+    <% include ./partials/jumbotron.ejs %>
 
     <!-- Main content here -->
     <!-- Team Section -->
+    <div class="container">
     <section id="team" class="bg-light-gray">
         <div class="container">
             <div class="row">
@@ -67,10 +65,9 @@
             </div>
         </div>
     </section>
+    </div>
 
     <!-- End main content -->
 
     <% include ./partials/footer.ejs %>
-
-<button class="btn btn-danger">Hello</button>
 </body>

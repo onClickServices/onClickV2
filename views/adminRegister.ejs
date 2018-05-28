@@ -19,37 +19,34 @@
 <div class="container text-center">
     <h1 class="lead display-3"><%= pageTitle %></h1>
 </div>
+
+<!-- Work on messaging -->
+
+
 <div class="container">
 
-    <form action="/contact" method="POST" id="contactPage" class="form">
+    <form action="/adminRegister" method="POST" id="contactPage" class="form">
 
         </br>
 
         <div class="form-group fieldset contact">
-            <label for=""><%= contactFirstName %></label>
-            <input type="text" class="form-control mb-2"  placeholder="First name"  name="firstName" autofocus required>
+            <label for=""><%= adminRegFirstName %></label>
+            <input type="text" class="form-control mb-2"  placeholder="First name"   name="adminFirstName" required autofocus>
         </div>
 
         <div class="form-group fieldset contact">
-            <label for=""><%= contactLastName %></label>
-            <input type="text" class="form-control mb-2"  placeholder="Last name"  name="lastName" required>
+            <label for=""><%= adminRegLastName %></label>
+            <input type="text" class="form-control mb-2"  placeholder="Last name"  name="adminLastName" required>
         </div>
 
         <div class="form-group fieldset contact">
-            <label for=""><%= contactPhone %></label>
-            <input type="text" class="form-control mb-2"  placeholder="555-555-0123"  name="phone" required>
+            <label for=""><%= adminRegPassword %></label>
+            <input type="password" class="form-control mb-2"  placeholder="Password"   name="adminPassword" required>
         </div>
-
         <div class="form-group fieldset contact">
-            <label for=""><%= contactEmail %></label>
-            <input type="email" class="form-control mb-2" placeholder="Someone@onclick.com" name="email">
+            <label for=""><%= adminRegPasswordConfirm %></label>
+            <input type="password" class="form-control mb-2"  placeholder="Confirm Password"  name="adminPasswordConfirm" required>
         </div>
-
-        <div class="form-group fieldset contact">
-            <label for=""><%= contactMessage %></label>
-            <textarea type="text" class="form-control mb-2"  placeholder="Your message" name="message"></textarea>
-        </div>
-
         </br>
 
         <div class="form-group fieldset">
@@ -57,5 +54,3 @@
         </div>
     </form>
 </div>
-
-<% include partials/footer.ejs %>

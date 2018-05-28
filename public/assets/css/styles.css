@@ -1,34 +1,99 @@
-@import "oc_variables.css";
+/*@import "oc_variables.css";*/
 
-/* Site styling */
-.form-control {
-    border: 0px solid;
-    border-bottom:1px solid;
-    border-bottom-color: var(--oc-green);
-}
+/*!* Site styling *!*/
+/*.form-control {*/
+    /*border: 0px solid;*/
+    /*border-bottom:1px solid;*/
+    /*border-bottom-color: var(--oc-green);*/
+/*}*/
 
-.btn-outline-primary{
-    border-color: var(--oc-green);
-    color: var(--oc-green);
-}
+/*.btn-outline-primary{*/
+    /*border-color: var(--oc-green);*/
+    /*color: var(--oc-green);*/
+/*}*/
 
-.btn-outline-primary:hover{
-    background-color: var(--oc-green);
-    border-color: var(--oc-green);
-}
+/*.btn-outline-primary:hover{*/
+    /*background-color: var(--oc-green);*/
+    /*border-color: var(--oc-green);*/
+/*}*/
 
-::placeholder {
-    color: var(--oc-green);
-    opacity: 1;
-}
-/* End of site styling*/
+/*.btn-outline-primary:focus {*/
+    /*outline-color: #000;: ;*/
+/*}*/
 
-/* Services styling*/
-.services {
-    background: var(--oc-main-bg-color);
-}
-/* End of services styling */
+/*::placeholder {*/
+    /*color: var(--oc-green);*/
+    /*opacity: 1;*/
+/*}*/
+/*!* End of site styling*!*/
 
-/* Contact styling */
+/*!* Navbar styling *!*/
+/*.navbar a{*/
+    /*color: var(--oc-white);*/
+    /*font-size: 15px;*/
+/*}*/
+/*a:hover{*/
+    /*color: var(--oc-green);*/
+    /*text-decoration: none;*/
+/*}*/
 
-/* End of contact styling */
+
+/*.navbar {*/
+    /*background-color: var(--oc-main-bg-color)!important;*/
+    /*border-bottom: 1px solid transparent;*/
+    /*font-size: 20px;*/
+/*}*/
+
+/*.navbar-brand {*/
+    /*display: inline;*/
+    /*margin-right: 52rem;*/
+/*}*/
+
+
+/*.nav-logo{*/
+    /*height: 2.25rem;*/
+/*}*/
+/*nav ul li {*/
+    /*font-size: 24px;*/
+/*}*/
+/*!* End of navbar styling*!*/
+
+/*!* Homepage styling*!*/
+
+/*!* Jumbotron Styling *!*/
+/*.jumbotron-fluid {*/
+    /*background-image: url("../images/black-and-white-blur-gray-34088.jpg");*/
+    /*background-size: cover;*/
+    /*color: var(--oc-white);*/
+    /*height: 40rem;*/
+    /*padding-top: 8rem;*/
+/*}*/
+/*.jumbotron-fluid a {*/
+    /*color: var(--oc-main-bg-color);*/
+    /*font-weight: bold;*/
+/*}*/
+/*.jumbotron-fluid a:hover {*/
+    /*color: var(--oc-green);*/
+/*}*/
+/*.jumbotron-fluid p {*/
+    /*font-size: 1rem;*/
+/*}*/
+/*!* End of jumbotron styling *!*/
+
+/*!* End of homepage styling *!*/
+
+/*!* Services styling *!*/
+/*.services {*/
+    /*background: var(--oc-alt-bg-color);*/
+/*}*/
+/*!* End of services styling *!*/
+
+/*!* Contact styling *!*/
+
+/*!* End of contact styling *!*/
+
+/*!* Footer styling *!*/
+/*.footer {*/
+    /*background-color: var(--oc-main-bg-color) !important;*/
+/*}*/
+/*!* End of footer styling*!*/
