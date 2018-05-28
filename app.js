@@ -59,31 +59,33 @@ app.use(cookieParser());
 
 app.use(session({
     secret: server.dbConfig.secret,
-    saveUniitialized: true,
-    resave: true
-}));
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true }
+}))
 
 app.use(passport.initialize());
 app.use(passport.session());
 
-// app.use(expressValidator({
-//     errorFormatter: (param, msg, value) => {
-//         let namespace = parm.split('.'),
-//             root = namespace.shift(),
-//             formParam = root;
-//         while(namespace.length) {
-//             formParam += '[' + namespace.shift() + ']';
-//         }
-//         return {
-//             param: formParam,
-//             msg: msg,
-//             value: value
-//         }
-//     }
-// }));
+app.use(expressValidator({
+    errorFormatter: (param, msg, value) => {
+        let namespace = parm.split('.'),
+            root = namespace.shift(),
+            formParam = root;
+        while(namespace.length) {
+            formParam += '[' + namespace.shift() + ']';
+        }
+        return {
+            param: formParam,
+            msg: msg,
+            value: value
+        }
+    }
+}));
 
 app.use(flash());
 
+console.log("%c Hello Floyd", "background-color: red; colo")
 
 
 app.use('/', routes);

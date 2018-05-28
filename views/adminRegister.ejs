@@ -25,27 +25,32 @@
 
 <div class="container">
 
-    <form action="/adminRegister" method="POST" id="contactPage" class="form">
+    <form action="/adminRegister" method="POST" id="adminRegister" class="form">
 
         </br>
 
         <div class="form-group fieldset contact">
             <label for=""><%= adminRegFirstName %></label>
-            <input type="text" class="form-control mb-2"  placeholder="First name"   name="adminFirstName" required autofocus>
+            <input type="text" class="form-control mb-2"  placeholder="First name"   name="adminRegFirstName" required autofocus>
         </div>
 
         <div class="form-group fieldset contact">
             <label for=""><%= adminRegLastName %></label>
-            <input type="text" class="form-control mb-2"  placeholder="Last name"  name="adminLastName" required>
+            <input type="text" class="form-control mb-2"  placeholder="Last name"  name="adminRegLastName" required>
+        </div>
+
+        <div class="form-group fieldset contact">
+            <label for=""><%= adminRegUsername %></label>
+            <input type="text" class="form-control mb-2"  placeholder="Username"  name="adminRegUsername" required>
         </div>
 
         <div class="form-group fieldset contact">
             <label for=""><%= adminRegPassword %></label>
-            <input type="password" class="form-control mb-2"  placeholder="Password"   name="adminPassword" required>
+            <input type="password" class="form-control mb-2"  placeholder="Password"   name="adminRegPassword" required>
         </div>
         <div class="form-group fieldset contact">
             <label for=""><%= adminRegPasswordConfirm %></label>
-            <input type="password" class="form-control mb-2"  placeholder="Confirm Password"  name="adminPasswordConfirm" required>
+            <input type="password" class="form-control mb-2"  placeholder="Confirm Password"  name="adminRegPasswordConfirm" required>
         </div>
         </br>
 
