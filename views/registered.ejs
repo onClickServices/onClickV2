@@ -9,19 +9,90 @@
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="../assets/css/styles.css">
     <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <!-- Editor -->
+    <script src="//cdn.ckeditor.com/4.9.2/full/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'editor1' );
+    </script>
 </head>
+
+<title><%= title %></title>
+
 <% include ./partials/navbar.ejs %>
 
-<ul class="list-group mt-4">
-    <% user.forEach(function (client) { %>
-    <li class="list-group-item card mb-4">
-        <%= client.firstName %> <%= client.lastName %> <br>
-        <%= client.phone %> <br>
-        <%= client.email %> <br>
-        <%= client.message %> <br>
-    </li>
-    <% }) %>
-</ul>
+<div id="main-header" class="py-2 bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md6">
+                <h1> <i class="fas fa-users"> </i>Registered Users</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="py-4 mb-4 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ml-auto">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <button class="btn-primary">Search</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="post" class="mb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h4> Client Name </h4>
+                    </div>
+                    <table class="table table-striped">
+                        <thead class="thead-inverse">
+                        <tr>
+                            <th>#Id</th>
+                            <th>Client</th>
+                            <th>Phone</th>
+                            <th>Message</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <% user.forEach(function (client) { %>
+                        <tr>
+                            <td scope="row">1</td>
+                            <td><%= client.firstName %> <%= client.lastName %></td>
+                            <td>Phone: <%= client.phone %> E-mail: <%= client.email %></td>
+                            <td><%= client.message %></td>
+                            <td><a href="/details" class="btn btn-success btn-sm">Details
+                                    <i class="fas fa-info-circle"></i>
+                                </a></td>
+                        </tr>
+                        <% }) %>
+                        </tbody>
+                    </table>
+                    <nav class="ml-4">
+                        <ul class="pagination">
+                            <li class="page-item disabled"><a href="#" class="page-link">Previous</a></li>
+                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                            <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <% include ./partials/footer.ejs %>

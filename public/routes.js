@@ -67,7 +67,8 @@ router.get('/services', (req, res) => {
 // Fetch contact
 router.get('/contact', (req, res) => {
     res.render('contact', {
-            title: messages.pages.site.title.translation_2,
+        title: messages.pages.site.title.translation_2,
+        pageTitle: messages.pages.about.translation_1,
         contactFirstName: messages.contact.translation_0,
         contactLastName: messages.contact.translation_1,
         contactPhone: messages.contact.translation_3,
@@ -133,7 +134,7 @@ router.get('/registered', (req, res) => {
 
 router.get('/portfolio', (req,res) => {
    res.render('portfolio', {
-       title: messages.title
+       title: messages.pages.site.title.translation_5
    })
 });
 
@@ -145,13 +146,28 @@ router.get('/about', (req, res) => {
 });
 
 router.get('/dashboard', (req, res) => {
-    res.render('dashboard', {
-       title: messages.pages.site.title.translation_8
+    User.find({}, (err, user) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('dashboard', {
+                title: messages.pages.site.title.translation_0,
+                user: user
+            });
+        }
     });
 });
-
-router.get('/dashboard', (req, res) => {
-    res.render('dasboard', {
+// TODO get details for one user
+router.get('/details', (req, res) => {
+    User.find({}, (err, user) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('details', {
+                title: messages.pages.site.title.translation_9,
+                user: user
+            });
+        }
     });
 });
 
