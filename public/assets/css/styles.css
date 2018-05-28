@@ -1,0 +1,34 @@
+@import "oc_variables.css";
+
+/* Site styling */
+.form-control {
+    border: 0px solid;
+    border-bottom:1px solid;
+    border-bottom-color: var(--oc-green);
+}
+
+.btn-outline-primary{
+    border-color: var(--oc-green);
+    color: var(--oc-green);
+}
+
+.btn-outline-primary:hover{
+    background-color: var(--oc-green);
+    border-color: var(--oc-green);
+}
+
+::placeholder {
+    color: var(--oc-green);
+    opacity: 1;
+}
+/* End of site styling*/
+
+/* Services styling*/
+.services {
+    background: var(--oc-main-bg-color);
+}
+/* End of services styling */
+
+/* Contact styling */
+
+/* End of contact styling */

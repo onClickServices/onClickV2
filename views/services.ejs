@@ -14,62 +14,65 @@
 
 <title><%= title %></title>
 
-    <% include partials/navbar.ejs%>
+<% include partials/navbar.ejs %>
 
 
 <!-- Services Section -->
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+<div class="services px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4"><%= pageHeader %></h1>
     <p class="lead"><%= pageLead %></p>
 </div>
-
-<div class="container">
-    <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 box-shadow">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal"><%= cardTitle[0] %></h4>
+<section class="services">
+    <div class="container">
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal"><%= cardTitle[0] %></h4>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title pricing-card-title"><%= cardBodyOne[0] %>
+                        <br>
+                        <small class="text-muted"><%= cardBodyOne[1] %></small>
+                    </h3>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <% for(var i = 0; i < cardBodyOne[2].length; i++){ %>
+                        <li><%= cardBodyOne[2][i] %></li>
+                        <% } %>
+                    </ul>
+                    <button href="/contact" type="button" class="btn btn-lg btn-block btn-outline-primary"><%= contactButton %></button>
+                </div>
             </div>
-            <div class="card-body">
-                <h3 class="card-title pricing-card-title"><%= cardBodyOne[0] %>
-                    <br>
-                    <small class="text-muted"><%= cardBodyOne[1] %></small></h3>
-                <ul class="list-unstyled mt-3 mb-4">
-                    <% for(var i = 0; i < cardBodyOne[2].length; i++){ %>
-                    <li><%= cardBodyOne[2][i] %></li>
-                    <%}%>
-                </ul>
-                <button type="button" class="btn btn-lg btn-block btn-outline-primary"><%= contactButton %></button>
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal"><%= cardTitle[1] %></h4>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title pricing-card-title"><%= cardBodyTwo[0] %>
+                        <small class="text-muted"><%= cardBodyTwo[1] %></small>
+                    </h3>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <% for(var i = 0; i < cardBodyTwo[2].length; i++){ %>
+                        <li><%= cardBodyTwo[2][i] %></li>
+                        <% } %>
+                    </ul>
+                    <button href="/views/contact.ejs" type="button" class="btn btn-lg btn-block btn-outline-primary mt-5"><%= contactButton %></button>
+                </div>
             </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal"><%= cardTitle[1] %></h4>
-            </div>
-            <div class="card-body">
-                <h3 class="card-title pricing-card-title"><%= cardBodyTwo[0] %><small class="text-muted"><%= cardBodyTwo[1] %></small></h3>
-                <ul class="list-unstyled mt-3 mb-4">
-                    <% for(var i = 0; i < cardBodyTwo[2].length; i++){ %>
-                    <li><%= cardBodyTwo[2][i] %></li>
-                    <%}%>
-                </ul>
-                <button type="button" class="btn btn-lg btn-block btn-outline-primary mt-5"><%= contactButton %></button>
-            </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-            <div class="card-header">
-                <h4 class="my-0 font-weight-normal"><%= cardTitle[2] %></h4>
-            </div>
-            <div class="card-body">
-                <h4 class="card-title pricing-card-title"><%= cardBodyThree[0] %></h4>
-                <ul class="list-unstyled mt-3 mb-4">
-                    <% for(var i = 0; i < cardBodyThree[1].length; i++){ %>
-                    <li><%= cardBodyThree[1][i] %></li>
-                    <%}%>
-                </ul>
-                <button type="button" class="btn btn-lg btn-block btn-outline-primary"><%= contactButton %></button>
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal"><%= cardTitle[2] %></h4>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title pricing-card-title"><%= cardBodyThree[0] %></h4>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <% for(var i = 0; i < cardBodyThree[1].length; i++){ %>
+                        <li><%= cardBodyThree[1][i] %></li>
+                        <% } %>
+                    </ul>
+                    <button href="/contact" type="button" class="btn btn-lg btn-block btn-outline-primary"><%= contactButton %></button>
+                </div>
             </div>
         </div>
     </div>
-
-    <% include partials/footer.ejs%>
-</div>
+</section>
+<% include partials/footer.ejs %>
