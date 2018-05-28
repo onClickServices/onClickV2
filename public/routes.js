@@ -6,7 +6,7 @@ let User = require('../lib/models/user')
 // Fetch index page
 router.get('/', (req, res) => {
     res.render('index', {
-        title: messages.title.translation_0
+        title: messages.pages.site.title.translation_0
     });
 });
 
@@ -50,7 +50,7 @@ router.get('/services', (req, res) => {
         ]
     ];
     res.render('services', {
-        title: messages.title.translation_1,
+        title: messages.pages.site.title.translation_1,
         pageHeader: messages.pages.servicePage.translation_0,
         pageLead: messages.pages.servicePage.translation_1,
         services: serviceList,
@@ -65,7 +65,7 @@ router.get('/services', (req, res) => {
 // Fetch contact
 router.get('/contact', (req, res) => {
     res.render('contact', {
-        title: messages.title.translation_2,
+            title: messages.pages.site.title.translation_2,
         contactFirstName: messages.contact.translation_0,
         contactLastName: messages.contact.translation_1,
         contactPhone: messages.contact.translation_3,
@@ -95,7 +95,7 @@ router.post('/contact', (req, res) => {
 
 router.get('/thanks', (req, res) => {
     res.render('thanks', {
-        title: messages.title.translation_3,
+        title: messages.pages.site.title.translation_3,
         header: 'Thank you for contacting onClick',
         body: 'Please expect a call from us within 24 hrs'
     });
@@ -103,13 +103,13 @@ router.get('/thanks', (req, res) => {
 
 router.get('/portfolio', (req, res) => {
    res.render('portfolio', {
-       title: messages.title.translation_5
+       title: messages.pages.site.title.translation_5
    });
 });
 
 router.get('/error', (req, res) => {
    res.render('error', {
-       title: messages.title.translation_4,
+       title: messages.pages.site.title.translation_4,
        errorMessage: messages.title.translation_4,
        messageToUser: messages.error.translation_0
    });
@@ -121,11 +121,30 @@ router.get('/registered', (req, res) => {
             console.log(err);
         } else {
             res.render('registered', {
-                title: messages.pages.registered.translation_0,
+                title: messages.pages.site.title.translation_6,
                 header: messages.pages.registered.translation_1,
                 user: user
             });
         }
+    });
+});
+
+router.get('/portfolio', (req,res) => {
+   res.render('portfolio', {
+       title: messages.title
+   })
+});
+
+router.get('/about', (req, res) => {
+    res.render('about', {
+        title: messages.pages.site.title.translation_7,
+        pageTitle: messages.pages.about.translation_0
+    });
+});
+
+router.get('/post', (req, res) => {
+    res.render('post', {
+       title: messages.pages.site.title.translation_8
     });
 });
 
