@@ -58,8 +58,53 @@ app.get('/', (req, res) => {
 
 // Fetch services page
 app.get('/services', (req, res) => {
+
+    let cardTitles = [
+        messages.pages.servicePage.translation_2,
+        messages.pages.servicePage.translation_10,
+        messages.pages.servicePage.translation_11
+    ];
+    let cardBodyOne = [
+        messages.pages.servicePage.translation_3,
+        messages.pages.servicePage.translation_4,
+        serviceList = [
+            messages.pages.servicePage.translation_5,
+            messages.pages.servicePage.translation_6,
+            messages.pages.servicePage.translation_7,
+            messages.pages.servicePage.translation_8,
+            messages.pages.servicePage.translation_9
+            ],
+    ];
+    let cardBodyTwo = [
+        messages.pages.servicePage.translation_17,
+        messages.pages.servicePage.translation_18,
+        serviceList = [
+            messages.pages.servicePage.translation_19,
+            messages.pages.servicePage.translation_20,
+            messages.pages.servicePage.translation_21,
+            messages.pages.servicePage.translation_21,
+        ]
+    ];
+    let cardBodyThree = [
+            messages.pages.servicePage.translation_12,
+        serviceList = [
+            messages.pages.servicePage.translation_13,
+            messages.pages.servicePage.translation_14,
+            messages.pages.servicePage.translation_15,
+            messages.pages.servicePage.translation_16,
+
+        ]
+    ];
     res.render('services', {
-        title: messages.title.translation_1
+        title: messages.title.translation_1,
+        pageHeader: messages.pages.servicePage.translation_0,
+        pageLead: messages.pages.servicePage.translation_1,
+        services: serviceList,
+        cardTitle: cardTitles,
+        cardBodyOne: cardBodyOne,
+        cardBodyTwo:cardBodyTwo,
+        cardBodyThree: cardBodyThree,
+        contactButton: messages.pages.site.translation_1
     });
 });
 
