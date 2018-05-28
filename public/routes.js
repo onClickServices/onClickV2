@@ -1,7 +1,9 @@
 let express = require('express');
 let router = express.Router();
 let messages = require('../lib/typings/text');
-let User = require('../lib/models/user')
+let User = require('../lib/models/user');
+
+
 
 // Fetch index page
 router.get('/', (req, res) => {
@@ -142,9 +144,14 @@ router.get('/about', (req, res) => {
     });
 });
 
-router.get('/post', (req, res) => {
-    res.render('post', {
+router.get('/dashboard', (req, res) => {
+    res.render('dashboard', {
        title: messages.pages.site.title.translation_8
+    });
+});
+
+router.get('/dashboard', (req, res) => {
+    res.render('dasboard', {
     });
 });
 
