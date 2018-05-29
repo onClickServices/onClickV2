@@ -1,3 +1,7 @@
+/*
+* Main app file for onClick v2
+* */
+
 // Import variables
 const express = require('express');
 const app = express();
@@ -57,16 +61,19 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+// Express session middleware
 app.use(session({
     secret: server.dbConfig.secret,
     resave: false,
     saveUninitialized: true,
     cookie: { secure: true }
-}))
+}));
 
+// Passport middle ware
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Express form validator
 app.use(expressValidator({
     errorFormatter: (param, msg, value) => {
         let namespace = parm.split('.'),
@@ -82,11 +89,8 @@ app.use(expressValidator({
         }
     }
 }));
-
+// Flash messaging
 app.use(flash());
-
-console.log("%c Hello Floyd", "background-color: red; colo")
-
-
+// Location to routes
 app.use('/', routes);
 // app.use('/admin', adminUser);
