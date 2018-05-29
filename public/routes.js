@@ -161,8 +161,7 @@ router.get('/portfolio', (req,res) => {
 router.get('/about', (req, res) => {
     // Render the about page
     res.render('about', {
-        title: messages.pages.site.title.translation_7,
-        pageTitle: messages.pages.about.translation_0
+        ocMessages: messages
     });
 });
 

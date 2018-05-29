@@ -1,4 +1,15 @@
-/*@import "oc_variables.css";*/
+@import "oc_variables.css";
+
+.bg-black {
+    background: var(--oc-black);
+    color: var(--oc-white);
+}
+
+#main-header img {
+    width: 80%;
+    height: 20%;
+}
+
 
 /*!* Site styling *!*/
 /*.form-control {*/
