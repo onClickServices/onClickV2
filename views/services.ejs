@@ -37,52 +37,72 @@
         <div class="card-deck mb-3 text-center">
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><%= cardTitle[0] %></h4>
+                    <h4 class="my-0 font-weight-normal"><%= ocMessages.pages.servicePage.translation_2 %></h4>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title pricing-card-title"><%= cardBodyOne[0] %>
+                    <h3 class="card-title pricing-card-title"><%= ocMessages.pages.servicePage.translation_3 %>
                         <br>
-                        <small class="text-muted"><%= cardBodyOne[1] %></small>
+                        <small class="text-muted"><%= ocMessages.pages.servicePage.translation_4 %></small>
                     </h3>
                     <ul class="list-unstyled mt-3 mb-4">
-                        <% for(var i = 0; i < cardBodyOne[2].length; i++){ %>
-                        <li><%= cardBodyOne[2][i] %></li>
+                        <% for(var i = 0; i < cardBodyOne.length; i++){ %>
+                        <li><%= cardBodyOne[i] %></li>
                         <% } %>
                     </ul>
-                    <button href="/contact" type="button" class="btn btn-lg btn-block btn-outline-success"><%= contactButton %></button>
+                    <button href="#" type="button" class="btn btn-lg btn-block btn-outline-success" data-toggle="modal" data-target="#designModal"><%= ocMessages.buttons.translation_2 %></button>
                 </div>
             </div>
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><%= cardTitle[1] %></h4>
+                    <h4 class="my-0 font-weight-normal"><%= ocMessages.pages.servicePage.translation_10 %></h4>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title pricing-card-title"><%= cardBodyTwo[0] %>
-                        <small class="text-muted"><%= cardBodyTwo[1] %></small>
+                    <h3 class="card-title pricing-card-title"><%= ocMessages.pages.servicePage.translation_17 %>
+                        <small class="text-muted"><%= ocMessages.pages.servicePage.translation_18 %></small>
                     </h3>
                     <ul class="list-unstyled mt-3 mb-4">
-                        <% for(var i = 0; i < cardBodyTwo[2].length; i++){ %>
-                        <li><%= cardBodyTwo[2][i] %></li>
+                        <% for(var i = 0; i < cardBodyTwo.length; i++){ %>
+                        <li><%= cardBodyTwo[i] %></li>
                         <% } %>
                     </ul>
-                    <button href="/views/contact.ejs" type="button" class="btn btn-lg btn-block btn-outline-success mt-5"><%= contactButton %></button>
+                    <button href="#" type="button" class="btn btn-lg btn-block btn-outline-success mt-5" data-toggle="modal" data-target="#siteModal"><%= ocMessages.buttons.translation_2 %></button>
                 </div>
             </div>
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><%= cardTitle[2] %></h4>
+                    <h4 class="my-0 font-weight-normal"><%= ocMessages.pages.servicePage.translation_11 %></h4>
                 </div>
                 <div class="card-body">
-                    <h4 class="card-title pricing-card-title"><%= cardBodyThree[0] %></h4>
+                    <h4 class="card-title pricing-card-title"><%= ocMessages.pages.servicePage.translation_12 %></h4>
                     <ul class="list-unstyled mt-3 mb-4">
-                        <% for(var i = 0; i < cardBodyThree[1].length; i++){ %>
-                        <li><%= cardBodyThree[1][i] %></li>
+                        <% for(var i = 0; i < cardBodyThree.length; i++){ %>
+                        <li><%= cardBodyThree[i] %></li>
                         <% } %>
                     </ul>
-                    <button href="/contact" type="button" class="btn btn-lg btn-block btn-outline-success"><%= contactButton %></button>
+                    <button href="#" type="button" class="btn btn-lg btn-block btn-outline-success" data-toggle="modal" data-target="#maintenanceModal"><%= ocMessages.buttons.translation_2 %></button>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <% include partials/footer.ejs %>
+
+<div class="modal fade" id="designModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title"><%= ocMessages.modals.servicePageModals.translation_0 %></h5>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <p class="lead"><%=ocMessages.modals.servicePageModals.translation_1 %></p>
+                    <p>Delete this and fill out this modal</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal"><%= ocMessages.buttons.translation_0 %></button>
+                <button class="btn btn-success" data-dismiss="modal"><%= ocMessages.buttons.translation_1 %></button>
+            </div>
+        </div>
+    </div>
+</div>
