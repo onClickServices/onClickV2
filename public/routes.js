@@ -266,8 +266,8 @@ router.get('/adminLogin', (req, res) => {
    res.render('adminLogin', {
        title: messages.pages.site.title.translation_11,
        pageTitle: messages.pages.admin.translation_4,
-       adminLoginUsername: messages.pages.admin.translation_2,
-       adminLoginPassword: messages.pages.admin.translation_3
+       adminUsername: messages.pages.admin.translation_2,
+       adminPassword: messages.pages.admin.translation_3
    })
 });
 
