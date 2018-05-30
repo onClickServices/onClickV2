@@ -23,7 +23,7 @@ router.use(expressValidator({
 }));
 
 // Fetch index page
-router.get('/', (req, res) => {
+router.get('/home', (req, res) => {
     // Render index page
     res.render('index', {
         title: messages.pages.site.title.translation_0
@@ -253,14 +253,22 @@ router.get('/adminLogin', (req, res) => {
    })
 });
 
-// Global flash variables
-router.use((req, res, next) => {
-    res.locals.success_msg = req.flash('success_msg');
-    res.locals.error_msg = req.flash('error_msg');
-    res.locals.error = req.flash('error');
-    next();
+// Fetch landing page
+router.get('/', (req, res) => {
+    let introText = [
+      messages.pages.landing.translation_0,
+      messages.pages.landing.translation_1,
+      messages.pages.landing.translation_2,
+      messages.pages.landing.translation_3,
+      messages.pages.landing.translation_4,
+      messages.pages.landing.translation_5,
+      messages.pages.landing.translation_6
+    ];
+    // Render the landing page
+    res.render('landing', {
+        ocMessages: messages,
+        introText: introText
+    })
 });
-
-
 
 module.exports = router;

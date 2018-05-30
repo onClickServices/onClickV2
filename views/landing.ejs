@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="assets/css/landing.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/landing.js"></script>
+
+<div class="welcome-section content-hidden">
+            <div class="content-wrap">
+                <ul class="fly-in-text">
+                    <% for(var i = 0; i < introText.length; i++){ %>
+                    <li><%= introText[i] %></li>
+                    <% } %>
+                </ul>
+                
+                <a href="/home" class="enter-button">Enter</a>
+            </div>
+</div>
+            

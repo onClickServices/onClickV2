@@ -1,4 +1,5 @@
 @import "oc_variables.css";
+@import "landing.css";
 
 .bg-black {
     background: var(--oc-black);
@@ -76,6 +77,10 @@ a:hover{
 nav ul li {
     font-size: 24px;
 }
+
+.green-line-navbar {
+border-bottom: 8px solid var(--oc-alt-green);
+}
 /* End of navbar styling*/
 
 /* Homepage styling*/
@@ -134,4 +139,15 @@ footer .icons{
     margin-left: 505px;
     color: var(--oc-white);
 }
+
+.green-line-footer {
+    border-top: 8px solid var(--oc-alt-green);
+}
 /* End of footer styling*/
+
+/* Dashboard styling */
+.dashboardActionButtons {
+    margin-top: 4em;
+}
+
+/* End of dashboard styling */
