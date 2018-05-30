@@ -33,53 +33,36 @@ router.get('/', (req, res) => {
 // Fetch services page
 router.get('/services', (req, res) => {
     // Variables for service page
-    let cardTitles = [
-        messages.pages.servicePage.translation_2,
-        messages.pages.servicePage.translation_10,
-        messages.pages.servicePage.translation_11
-    ];
-    let cardBodyOne = [
-        messages.pages.servicePage.translation_3,
-        messages.pages.servicePage.translation_4,
-        serviceList = [
+    let cardBodyOne =  [
             messages.pages.servicePage.translation_5,
             messages.pages.servicePage.translation_6,
             messages.pages.servicePage.translation_7,
             messages.pages.servicePage.translation_8,
             messages.pages.servicePage.translation_9
-        ],
-    ];
+        ];
     let cardBodyTwo = [
-        messages.pages.servicePage.translation_17,
-        messages.pages.servicePage.translation_18,
-        serviceList = [
             messages.pages.servicePage.translation_19,
             messages.pages.servicePage.translation_20,
             messages.pages.servicePage.translation_21,
             messages.pages.servicePage.translation_21,
-        ]
     ];
     let cardBodyThree = [
-        messages.pages.servicePage.translation_12,
-        serviceList = [
             messages.pages.servicePage.translation_13,
             messages.pages.servicePage.translation_14,
             messages.pages.servicePage.translation_15,
             messages.pages.servicePage.translation_16,
-
-        ]
     ];
+
     // Render the services page
     res.render('services', {
         title: messages.pages.site.title.translation_1,
         pageHeader: messages.pages.servicePage.translation_0,
         pageLead: messages.pages.servicePage.translation_1,
-        services: serviceList,
-        cardTitle: cardTitles,
         cardBodyOne: cardBodyOne,
-        cardBodyTwo:cardBodyTwo,
+        cardBodyTwo: cardBodyTwo,
         cardBodyThree: cardBodyThree,
-        contactButton: messages.pages.site.translation_1
+        contactButton: messages.pages.site.translation_2,
+        ocMessages: messages
     });
 });
 
@@ -120,7 +103,7 @@ router.post('/contact', (req, res) => {
     });
 });
 
-// Feth the thank you page
+// Fetch the thank you page
 router.get('/thanks', (req, res) => {
     // Render the thank you page
     res.render('thanks', {
@@ -178,8 +161,7 @@ router.get('/portfolio', (req,res) => {
 router.get('/about', (req, res) => {
     // Render the about page
     res.render('about', {
-        title: messages.pages.site.title.translation_7,
-        pageTitle: messages.pages.about.translation_0
+        ocMessages: messages
     });
 });
 
