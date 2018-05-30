@@ -11,100 +11,127 @@
 }
 
 
-/*!* Site styling *!*/
-/*.form-control {*/
-    /*border: 0px solid;*/
-    /*border-bottom:1px solid;*/
-    /*border-bottom-color: var(--oc-green);*/
-/*}*/
+/* Site styling */
+body{
+    font-family: "Century Gothic";
+    background-color: var(--oc-alt-bg-color);
+    margin: 0 0;
+}
+.form-control {
+    border: 0px solid;
+    border-bottom:1px solid;
+    border-bottom-color: var(--oc-green);
+}
 
-/*.btn-outline-primary{*/
-    /*border-color: var(--oc-green);*/
-    /*color: var(--oc-green);*/
-/*}*/
+.btn-outline-primary{
+    border-color: var(--oc-green);
+    color: var(--oc-green);
+}
 
-/*.btn-outline-primary:hover{*/
-    /*background-color: var(--oc-green);*/
-    /*border-color: var(--oc-green);*/
-/*}*/
+.btn-outline-primary:hover{
+    background-color: var(--oc-green);
+    border-color: var(--oc-green);
+}
 
-/*.btn-outline-primary:focus {*/
-    /*outline-color: #000;: ;*/
-/*}*/
+.btn-outline-primary:focus {
+    outline-color: #000;: ;
+}
 
-/*::placeholder {*/
-    /*color: var(--oc-green);*/
-    /*opacity: 1;*/
-/*}*/
-/*!* End of site styling*!*/
+::placeholder {
+    color: var(--oc-green);
+    opacity: 1;
+}
 
-/*!* Navbar styling *!*/
-/*.navbar a{*/
-    /*color: var(--oc-white);*/
-    /*font-size: 15px;*/
-/*}*/
-/*a:hover{*/
-    /*color: var(--oc-green);*/
-    /*text-decoration: none;*/
-/*}*/
+section{
+    margin-top: inherit;
+}
+/* End of site styling*/
 
-
-/*.navbar {*/
-    /*background-color: var(--oc-main-bg-color)!important;*/
-    /*border-bottom: 1px solid transparent;*/
-    /*font-size: 20px;*/
-/*}*/
-
-/*.navbar-brand {*/
-    /*display: inline;*/
-    /*margin-right: 52rem;*/
-/*}*/
+/* Navbar styling */
+.navbar a{
+    color: var(--oc-white);
+    font-size: 15px;
+}
+a:hover{
+    color: var(--oc-green);
+    text-decoration: none;
+}
 
 
-/*.nav-logo{*/
-    /*height: 2.25rem;*/
-/*}*/
-/*nav ul li {*/
-    /*font-size: 24px;*/
-/*}*/
-/*!* End of navbar styling*!*/
+.navbar {
+    background-color: var(--oc-main-bg-color)!important;
+    border-bottom: 1px solid transparent;
+    font-size: 20px;
+}
 
-/*!* Homepage styling*!*/
+.navbar-brand {
+    display: inline;
+    margin-right: 52rem;
+}
 
-/*!* Jumbotron Styling *!*/
-/*.jumbotron-fluid {*/
-    /*background-image: url("../images/black-and-white-blur-gray-34088.jpg");*/
-    /*background-size: cover;*/
-    /*color: var(--oc-white);*/
-    /*height: 40rem;*/
-    /*padding-top: 8rem;*/
-/*}*/
-/*.jumbotron-fluid a {*/
-    /*color: var(--oc-main-bg-color);*/
-    /*font-weight: bold;*/
-/*}*/
-/*.jumbotron-fluid a:hover {*/
-    /*color: var(--oc-green);*/
-/*}*/
-/*.jumbotron-fluid p {*/
-    /*font-size: 1rem;*/
-/*}*/
-/*!* End of jumbotron styling *!*/
 
-/*!* End of homepage styling *!*/
+.nav-logo{
+    height: 2.25rem;
+}
+nav ul li {
+    font-size: 24px;
+}
+/* End of navbar styling*/
 
-/*!* Services styling *!*/
-/*.services {*/
-    /*background: var(--oc-alt-bg-color);*/
-/*}*/
-/*!* End of services styling *!*/
+/* Homepage styling*/
 
-/*!* Contact styling *!*/
+/* Jumbotron Styling */
+.jumbotron-fluid {
+    background-image: url("../images/black-and-white-blur-gray-34088.jpg");
+    background-size: cover;
+    color: var(--oc-white);
+    height: 40rem;
+    padding-top: 8rem;
+}
+.jumbotron-fluid a {
+    color: var(--oc-main-bg-color);
+    font-weight: bold;
+}
+.jumbotron-fluid a:hover {
+    color: var(--oc-green);
+}
+.jumbotron-fluid p {
+    font-size: 1rem;
+}
 
-/*!* End of contact styling *!*/
+.oc-span {
+    color: var(--oc-green);
+}
 
-/*!* Footer styling *!*/
-/*.footer {*/
-    /*background-color: var(--oc-main-bg-color) !important;*/
-/*}*/
-/*!* End of footer styling*!*/
+.btn{
+    background-color: var(--oc-main-bg-color);
+    color: var(--oc-white);
+}
+/* End of jumbotron styling */
+
+/* End of homepage styling */
+
+/* Services styling */
+.services {
+    background: var(--oc-alt-bg-color);
+}
+/* End of services styling */
+
+/* Contact styling */
+
+/* End of contact styling */
+
+/* Footer styling */
+footer {
+    background-color: var(--oc-main-bg-color)!important;
+}
+
+footer a{
+    color: var(--oc-white);
+}
+
+footer .icons{
+    margin-left: 505px;
+    color: var(--oc-white);
+}
+/* End of footer styling*/
