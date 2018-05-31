@@ -109,28 +109,28 @@
                 <div class="container">
                     <p class="card-header mb-2 text-center bg-secondary text-white"><%= ocMessages.modals.servicePageModals.translation_1 %></p>
                     <hr>
-                    <div id="serviceButton" class="row justify-content-between">
+                    <div id="accordion" role="tablist" class="row justify-content-between">
                         <div class="col-lg-4">
                             <div>
-                                <button class="btn btn-outline-primary btn-block" href="#"
+                                <button class="btn btn-outline-primary btn-block port-item" href="#"
                                         data-toggle="collapse"
-                                        data-target="#scratch" data-parent="#serviceButton">Starting from scratch?
+                                        data-target="#scratch">Starting from scratch?
                                 </button>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div>
-                                <button class="btn btn-outline-primary btn-block" href="#"
+                                <button class="btn btn-outline-primary btn-bloc port-item" href="#"
                                         data-toggle="collapse"
-                                        data-target="#idea" data-parent="#serviceButton">Have an idea?
+                                        data-target="#idea">Have an idea?
                                 </button>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div>
-                                <button class="btn btn-outline-primary btn-block" href="#"
+                                <button class="btn btn-outline-primary btn-block port-item" href="#"
                                         data-toggle="collapse"
-                                        data-target="#branding" data-parent="#serviceButton">Need Branding?
+                                        data-target="#branding">Need Branding?
                                 </button>
                             </div>
                         </div>
@@ -333,8 +333,8 @@
                                     <div class="mt-1">Reality</div>
                                 </div>
                                 <div class="progress mb-2">
-                                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
-                                         style="width: 25%">25%
+                                    <div class="progress-bar bg-light progress-bar-striped progress-bar-animated text-dark"
+                                         style="width: 10%">10%
                                     </div>
                                 </div>
                                 <div class="card">
@@ -462,3 +462,10 @@
     </div>
 </div>
 <!-- End of maintenance modal -->
+
+
+<script>
+    $('.port-item').click(function () {
+        $('.collapse').collapse('hide');
+    })
+</script>
