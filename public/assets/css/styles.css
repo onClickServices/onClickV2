@@ -46,6 +46,11 @@ body{
 section{
     margin-top: inherit;
 }
+
+hr {
+    border-color: var(--oc-green);
+}
+
 /* End of site styling*/
 
 /* Navbar styling */
@@ -148,6 +153,12 @@ footer .icons{
 /* Dashboard styling */
 .dashboardActionButtons {
     margin-top: 4em;
+}
+
+.info {
+    font-size: .5em;
+    padding-bottom: 2em;
+    color: var(--oc-blue);
 }
 
 /* End of dashboard styling */

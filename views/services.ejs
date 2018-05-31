@@ -7,29 +7,36 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
           integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <!-- Custom Stylesheets -->
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/services.css">
     <!--Font Awesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
 
-    <!-- Editor -->
-    <script src="//cdn.ckeditor.com/4.9.2/full/ckeditor.js"></script>
-    <script>
-        CKEDITOR.replace( 'editor1' );
-    </script>
 </head>
 
 <title><%= title %></title>
 
 <% include partials/navbar.ejs %>
-
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
 
 <!-- Services Section -->
 <div class="services px-3 py-3 pt-md-5 pb-md-4 mt-3 mx-auto text-center">
-    <h1 class="display-4"><%= pageHeader %></h1>
+    <h1 class="display-4 mt-3"><%= pageHeader %></h1>
     <p class="lead"><%= pageLead %></p>
 </div>
 <section class="services">
@@ -49,7 +56,8 @@
                         <li><%= cardBodyOne[i] %></li>
                         <% } %>
                     </ul>
-                    <button href="#" type="button" class="btn btn-lg btn-block btn-outline-success" data-toggle="modal" data-target="#designModal"><%= ocMessages.buttons.translation_2 %></button>
+                    <button href="#" type="button" class="btn btn-lg btn-block btn-outline-success" data-toggle="modal"
+                            data-target="#designModal"><%= ocMessages.buttons.translation_2 %></button>
                 </div>
             </div>
             <div class="card mb-4 box-shadow">
@@ -65,7 +73,9 @@
                         <li><%= cardBodyTwo[i] %></li>
                         <% } %>
                     </ul>
-                    <button href="#" type="button" class="btn btn-lg btn-block btn-outline-warning mt-5" data-toggle="modal" data-target="#siteModal"><%= ocMessages.buttons.translation_2 %></button>
+                    <button href="#" type="button" class="btn btn-lg btn-block btn-outline-warning mt-5"
+                            data-toggle="modal"
+                            data-target="#siteModal"><%= ocMessages.buttons.translation_2 %></button>
                 </div>
             </div>
             <div class="card mb-4 box-shadow">
@@ -79,7 +89,9 @@
                         <li><%= cardBodyThree[i] %></li>
                         <% } %>
                     </ul>
-                    <button href="#" type="button" class="btn btn-lg btn-block btn-outline-secondary" data-toggle="modal" data-target="#maintenanceModal"><%= ocMessages.buttons.translation_2 %></button>
+                    <button href="#" type="button" class="btn btn-lg btn-block btn-outline-secondary"
+                            data-toggle="modal"
+                            data-target="#maintenanceModal"><%= ocMessages.buttons.translation_2 %></button>
                 </div>
             </div>
         </div>
@@ -88,34 +100,336 @@
 <% include partials/footer.ejs %>
 
 <div class="modal fade" id="designModal">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title"><%= ocMessages.modals.servicePageModals.translation_0 %></h5>
             </div>
             <div class="modal-body">
                 <div class="container">
-                    <p class="lead"><%=ocMessages.modals.servicePageModals.translation_1 %></p>
-                    <p>Delete this and fill out this modal</p>
+                    <p class="card-header mb-2 text-center bg-secondary text-white"><%= ocMessages.modals.servicePageModals.translation_1 %></p>
+                    <hr>
+                    <div id="serviceButton" class="row justify-content-between">
+                        <div class="col-lg-4">
+                            <div>
+                                <button class="btn btn-outline-primary btn-block" href="#"
+                                        data-toggle="collapse"
+                                        data-target="#scratch" data-parent="#serviceButton">Starting from scratch?
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div>
+                                <button class="btn btn-outline-primary btn-block" href="#"
+                                        data-toggle="collapse"
+                                        data-target="#idea" data-parent="#serviceButton">Have an idea?
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div>
+                                <button class="btn btn-outline-primary btn-block" href="#"
+                                        data-toggle="collapse"
+                                        data-target="#branding" data-parent="#serviceButton">Need Branding?
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Idea dropdown -->
+                    <div class="row">
+                        <div id="idea" class="collapse col-lg-12 pt-3">
+                            <div class="bg-success text-white text-center py-2">
+                                <p>Great, Your halfway there! Let us finish it for you!</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mt-1">Scratch</div>
+                                <div class="mt-1">Idea</div>
+                                <div class="mt-1">Reality</div>
+                            </div>
+                            <div class="progress mb-2">
+                                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
+                                     style="width: 50%">50%
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header bg-light">
+                                    <p class="text-center"> We have multiple packages</p>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <p class="mb-0">Basic logo packages starting at $100</p>
+                                                    <p class="text-muted text-center">Package includes:</p>
+                                                </div>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> 3 final design concepts
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> 1 revision
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> Turn around time as short as 4days
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> Satisfaction Guaranteed <i
+                                                                class="fas fa-info info"></i>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success text-center">
+                                                        -
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success text-center">
+                                                        -
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <p class="mb-0">Starter logo packages starting at $175</p>
+                                                    <p class="text-muted text-center">Package includes:</p>
+                                                </div>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> 5 final design concepts
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> 2 revisions
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> Turn around time as short as 4days
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> Up to 5 file types of your logo
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> Free letter head design <i
+                                                                class="fas fa-info info"></i>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> Satisfaction Guaranteed <i
+                                                                class="fas fa-info info"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-primary btn-block" href="/contact">
+                                    Ready to get started?
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of idea dropdown -->
+
+
+                    <!-- Scratch dropdown-->
+                    <div class="row">
+                        <div id="scratch" class="collapse col-lg-12 pt-3">
+                            <div class="card card-body bg-warning text-white py-2">
+                                <p class="text-center">That's ok we are here to get you to reality!</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="mt-1">Scratch</div>
+                                <div class="mt-1">Idea</div>
+                                <div class="mt-1">Reality</div>
+                            </div>
+                            <div class="progress mb-2">
+                                <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
+                                     style="width: 25%">25%
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header bg-light">
+                                    <p class="text-center"> We can get you started </p>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <p class="mb-0">Basic logo packages starting at $200</p>
+                                                    <p class="text-muted text-center">Package includes:</p>
+                                                </div>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> 5 Concepts
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> 2 revsions
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> Turn around time as short as 5 days
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> Satisfaction Guaranteed <i
+                                                                class="fas fa-info info"></i>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success text-center">
+                                                        -
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success text-center">
+                                                        -
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <p class="mb-0">Starter logo packages starting at $275</p>
+                                                    <p class="text-muted text-center">Package includes:</p>
+                                                </div>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> 5 final design concepts
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> 2 revisions
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> Turn around time as short as 4days
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> Up to 5 file types of your logo
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check"></i> Free letter head design and
+                                                        business
+                                                        card design <i
+                                                                class="fas fa-info info"></i>
+                                                    </li>
+                                                    <li class="list-group-item list-group-item-action list-group-item-success">
+                                                        <i class="fas fa-check" data-toggle="tooltip"
+                                                           data-placement="bottom"
+                                                           title="This does not include the deposit required and will not be refunded for any reason"></i>
+                                                        Satisfaction Guaranteed <i
+                                                                class="fas fa-info info"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-primary btn-block" href="/contact">
+                                Ready to get started?
+                            </button>
+                        </div>
+                        <!-- End of scratch dropdown -->
+
+                        <!-- Branding dropdown-->
+                        <div class="row">
+                            <div id="branding" class="collapse col-lg-12 pt-3">
+                                <div class="card card-body bg-warning text-white py-2">
+                                    <p class="text-center">Branding isn't you thing, its ours!</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-1">Scratch</div>
+                                    <div class="mt-1">Idea</div>
+                                    <div class="mt-1">Reality</div>
+                                </div>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
+                                         style="width: 25%">25%
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header bg-light">
+                                        <p class="text-center"> Branding avaliable </p>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <p class="mb-0">Basic branding packages starting at $100</p>
+                                                        <p class="text-muted text-center">Package includes:</p>
+                                                    </div>
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> 2 business card design concepts
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> 2 business card revisions
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> 2 letterhead designs
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> 1 letterhead revision
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> Satisfaction Guaranteed <i
+                                                                    class="fas fa-info info"></i>
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success text-center">
+                                                            -
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <p class="mb-0">Startup packages starting at $200</p>
+                                                        <p class="text-muted text-center">Package includes:</p>
+                                                    </div>
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> 5 business card designs
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> 5 business revisions
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> 3 letterhead concepts
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> 2 letterhead revisions
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check"></i> Turn around time as short as
+                                                            4days
+                                                        </li>
+                                                        </li>
+                                                        <li class="list-group-item list-group-item-action list-group-item-success">
+                                                            <i class="fas fa-check" data-toggle="tooltip"
+                                                               data-placement="bottom"
+                                                               title="This does not include the deposit required and will not be refunded for any reason"></i>
+                                                            Satisfaction Guaranteed <i
+                                                                    class="fas fa-info info"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-primary btn-block" href="/contact">
+                                    Ready to get started?
+                                </button>
+                            </div>
+                            <!-- End of branding dropdown -->
+
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="modal"><%= ocMessages.buttons.translation_0 %></button>
-                <button class="btn btn-success" data-dismiss="modal"><%= ocMessages.buttons.translation_1 %></button>
             </div>
         </div>
     </div>
 </div>
-
+<!---->
 <div class="modal fade" id="siteModal">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header bg-warning text-white">
                 <h5 class="modal-title"><%= ocMessages.modals.servicePageModals.translation_2 %></h5>
             </div>
             <div class="modal-body">
                 <div class="container">
-                    <p class="lead"><%=ocMessages.modals.servicePageModals.translation_3 %></p>
+                    <p class="lead"><%= ocMessages.modals.servicePageModals.translation_3 %></p>
                     <p>Delete this and fill out this modal</p>
                 </div>
             </div>
@@ -127,15 +441,16 @@
     </div>
 </div>
 
+<!-- Maintenance modal-->
 <div class="modal fade" id="maintenanceModal">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header bg-secondary text-white">
                 <h5 class="modal-title"><%= ocMessages.modals.servicePageModals.translation_4 %></h5>
             </div>
             <div class="modal-body">
                 <div class="container">
-                    <p class="lead"><%=ocMessages.modals.servicePageModals.translation_5 %></p>
+                    <p class="lead"><%= ocMessages.modals.servicePageModals.translation_5 %></p>
                     <p>Delete this and fill out this modal</p>
                 </div>
             </div>
@@ -146,3 +461,4 @@
         </div>
     </div>
 </div>
+<!-- End of maintenance modal -->
