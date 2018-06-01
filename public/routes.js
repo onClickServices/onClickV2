@@ -165,12 +165,6 @@ router.get('/about', (req, res) => {
     });
 });
 
-router.get('/ck', (req, res) => {
-    // Render the about page
-    res.render('ckeditor', {
-        ocMessages: messages
-    });
-});
 
 // Fetch the dashboard page
 router.get('/dashboard', (req, res) => {
