@@ -1,3 +1,14 @@
+@import "oc_variables.css";
+
 .oc-text {
     color: var(--oc-green)
+}
+.info {
+    font-size: .7em;
+    font-weight: bolder;
+    padding-bottom: 2em;
+    color: var(--oc-blue);
+}
+.card-body {
+    background: var(--oc-light-grey);
 }

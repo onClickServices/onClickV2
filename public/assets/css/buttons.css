@@ -1,0 +1,15 @@
+.button-flash {
+  border-color :#f2f;
+	-webkit-animation: flash linear 1s infinite;
+	animation: flash linear 2s infinite;
+}
+@-webkit-keyframes flash {
+	0% { opacity: .7; }
+	50% { opacity: .1; }
+	100% { opacity: .7; }
+}
+@keyframes flash {
+	0% { opacity: .7; }
+	50% { opacity: .1; }
+	100% { opacity: .7; }
+}
