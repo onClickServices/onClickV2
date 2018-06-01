@@ -1,0 +1,19 @@
+body{
+    background: #535454;
+    color: #000;
+}
+h1{
+    text-align: center;
+}
+
+.pic img{
+    margin: 0 auto;
+}
+.founders ul{
+    list-style: none;
+}
+#page-break{
+    border: .5rem solid #59B069;
+    width: 100%;
+    margin-top: 2rem;
+}

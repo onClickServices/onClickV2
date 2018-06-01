@@ -2,6 +2,7 @@
 <!-- Latest compiled and bootstrap minified CSS -->
 <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 <!-- Custom Stylesheets -->
+<link rel="stylesheet" href="../assets/css/about.css">
 <link rel="stylesheet" href="../assets/css/styles.css">
 
 
@@ -32,61 +33,281 @@
 
 <title><%= ocMessages.pages.site.title.translation_7 %></title>
 <% include partials/navbar.ejs %>
-<div class="container text-center">
-    <h1 class="lead display-3"><%= ocMessages.pages.about.translation_0 %></h1>
-</div>
-
-<div class="container">
+<title><%= ocMessages.pages.site.title.translation_7 %></title>
+<% include partials/navbar.ejs %>
+<div class="container founders">
+    <h1 class="display-4 text-center">Meet The Founders</h1>
+    <hr id="page-break">
     <div class="row">
-
-        <a href="#" data-toggle="modal" data-target="#perryModal">
-            <div class=" col-lg-5 col-md-1 col-sm-4 col-xs-6 mb-2 mr-2">
-                <img src="assets/images/pcra.png" alt="" class="img-responsive">
+        <div class="col-lg-6 pic container-fluid mt-4">
+            <img class="float-right" src="assets/images/byron2.png" alt="Byron's pic" id="byron">
+            <div class="text-center">
+                <h3 class="">Byron Buyck</h3>
+                <p class="text-white">Lead Software Developer</p>
             </div>
-        </a>
-
-        <a href="#" data-toggle="modal" data-target="#byronModal">
-            <div class=" col-lg-5 col-md-1 col-sm-4 col-xs-6 mb-2">
-                <img src="assets/images/byron2.png" alt="" class="img-responsive">
+            <hr>
+            <ul>
+                <li>Java</li>
+                <li>Adobe XD</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 pic container-fluid mt-4">
+            <img class="float-right" src="assets/images/pcra.png" alt="Perry's pic" id="perry">
+            <div class="text-center">
+                <h3 class="text-center">Perry Craft</h3>
+                <p class="text-white">Lead Web Developer</p>
+                <hr>
             </div>
-        </a>
-
-        <a href="#" data-toggle="modal" data-target="#philModal">
-            <div class=" col-lg-5 col-md-1 col-sm-4 col-xs-6 mt-2 mr-2 mb-2">
-                <img src="assets/images/phil.jpg" alt="" class="img-responsive">
+            <ul>
+                <li>MongoDB</li>
+                <li>AngularJS</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 pic container-fluid mt-4">
+            <img class="float-right" src="assets/images/floyd2.png" alt="Floyd's pic" id="floyd">
+            <div class="text-center">
+                <h3>Floyd Holt</h3>
+                <p class="text-white">Project Manager & Web Developer</p>
+                <hr>
             </div>
-        </a>
-
-        <a href="#" data-toggle="modal" data-target="#floydModal">
-            <div class="col-lg-5 col-md-1 col-sm-4 col-xs-6 mt-2 mb-2">
-                <img src="assets/images/floyd2.png" alt="" class="img-responsive">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 pic container-fluid mt-4">
+            <img class="float-right" src="assets/images/phil.jpg" alt="Phil's pic" id="phil">
+            <div class="text-center">
+                <h3>Philip Simmons</h3>
+                <p class="text-white">Creative Director</p>
+                <hr>
             </div>
-        </a>
-        <!--<div class="col-lg-3 col-md-4 col-sm-6">-->
-        <!--<a href="assets/images/pcra.png" class="img-thumbnail">-->
-        <!--<p>Perry Craft</p>-->
-        <!--<img src="assets/images/pcra.png" alt="">-->
-        <!--</a>-->
-        <!--</div>-->
-        <!--<div class="col-lg-3 col-md-4 col-sm-6">-->
-        <!--<a href="assets/images/pcra.png" class="img-thumbnail">-->
-        <!--<p>Perry Craft</p>-->
-        <!--<img src="assets/images/pcra.png" alt="">-->
-        <!--</a>-->
-        <!--</div>-->
-        <!--<div class="col-lg-3 col-md-4 col-sm-6">-->
-        <!--<a href="assets/images/pcra.png" class="img-thumbnail">-->
-        <!--<p>Perry Craft</p>-->
-        <!--<img src="assets/images/pcra.png" alt="">-->
-        <!--</a>-->
-        <!--</div>-->
-        <!--<div class="col-lg-3 col-md-4 col-sm-6 m-auto">-->
-        <!--<a href="assets/images/pcra.png" class="img-thumbnail">-->
-        <!--<p>Perry Craft</p>-->
-        <!--<img src="assets/images/pcra.png" alt="">-->
-        <!--</a>-->
+            <ul>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+            </ul>
+        </div>
+    </div>
+    <hr id="page-break">
+    <div class="row header">
+        <h1>We dream, explore, create and craft progressive digitial experiences.</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>How We Work</h3>
+            <p>We'll work within your existing branding, or start from scratch if you're ready for a makeover. In either case, your website's design will reflect your image and help you stand out from the crowd. We all have similar programming knowledge but specialize in specific areas. This enables us to be able to take care of our customers quickly and with exceeding precision.</p>
+        </div>
+        <div class="col-md-6">
+            <h3>What We Offer</h3>
+            <p>The days of your customers engaging with websites exclusively on desktop are over. Mobile optimization is a must. Responsive design allows your website to look great and operate flawlessly on every device from desktop to mobile. It is one of the most vital features of a website since 88% of users who search for a local business on a mobile device call or go to that business within 24 hours. We will accomplish this vision with you. We do this by treating you like you are a part of the team. It would be a pleasure to work with you.</p>
+        </div>
     </div>
 </div>
+<% include partials/footer.ejs %>
+<div class="modal fade mt-5" id="perryModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <header id="main-header">
+                    <div class="rox no-gutters">
+                        <div class="col-lg-4 col-md-5">
+                            <img src="assets/images/pcra.png" alt="">
+                        </div>
+                        <div class="col-lg-8 col-md-7">
+                            <div class="d-flex flex-column">
+                                <div class="p-2 bg-dark text-white"></div>
+                                <div class="name d-flex flex-row justify-content-between align-items-center">
+                                    <h1 class="display-5">
+                                        <%= ocMessages.ocPeople.perry.translation_0 %>
+                                    </h1>
+                                    <i class="fab fa-facebook-square"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-github"></i>
+                                </div>
+                            </div>
+                            <div class="p-2 bg-black text-white">
+                                <%= ocMessages.ocPeople.perry.translation_1 %>
+                            </div>
+                            <div>
+                                <div class="d-flex flex-row text-white align-items-stretch text-center">
+                                    <div class="port-item bg-primary">
+                                        <i class="fas fa-home d-block"></i> Home
+                                    </div>
+                                    <div class="port-item bg-warning">
+                                        <i class="fas fa-paperclip"></i> Resume
+                                    </div>
+                                    <div class="port-item bg-danger">
+                                        <i class="fab fa-github-square"></i> Github
+                                    </div>
+                                    <div class="port-item bg-info">
+                                        <i class="fas fa-address-card"></i> Contact
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade mt-5" id="byronModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <header id="main-header">
+                    <div class="rox no-gutters">
+                        <div class="col-lg-4 col-md-5">
+                            <img src="assets/images/byron2.png" alt="">
+                        </div>
+                        <div class="col-lg-8 col-md-7">
+                            <div class="d-flex flex-column">
+                                <div class="p-2 bg-dark text-white"></div>
+                                <div class="name d-flex flex-row justify-content-between align-items-center">
+                                    <h1 class="display-5">
+                                        <%= ocMessages.ocPeople.byron.translation_0 %>
+                                    </h1>
+                                    <i class="fab fa-facebook-square"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-github"></i>
+                                </div>
+                            </div>
+                            <div class="p-2 bg-black text-white">
+                                <%= ocMessages.ocPeople.byron.translation_1 %>
+                            </div>
+                            <div>
+                                <div class="d-flex flex-row text-white align-items-stretch text-center">
+                                    <div class="port-item bg-primary">
+                                        <i class="fas fa-home d-block"></i> Home
+                                    </div>
+                                    <div class="port-item bg-warning">
+                                        <i class="fas fa-paperclip"></i> Resume
+                                    </div>
+                                    <div class="port-item bg-danger">
+                                        <i class="fab fa-github-square"></i> Github
+                                    </div>
+                                    <div class="port-item bg-info">
+                                        <i class="fas fa-address-card"></i> Contact
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade mt-5" id="philModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <header id="main-header">
+                    <div class="rox no-gutters">
+                        <div class="col-lg-4 col-md-5">
+                            <img src="assets/images/phil.jpg" alt="">
+                        </div>
+                        <div class="col-lg-8 col-md-7">
+                            <div class="d-flex flex-column">
+                                <div class="p-2 bg-dark text-white"></div>
+                                <div class="name d-flex flex-row justify-content-between align-items-center">
+                                    <h1 class="display-5">
+                                        <%= ocMessages.ocPeople.phil.translation_0 %>
+                                    </h1>
+                                    <i class="fab fa-facebook-square"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-github"></i>
+                                </div>
+                            </div>
+                            <div class="p-2 bg-black text-white">
+                                <%= ocMessages.ocPeople.phil.translation_1 %>
+                            </div>
+                            <div>
+                                <div class="d-flex flex-row text-white align-items-stretch text-center">
+                                    <div class="port-item bg-primary">
+                                        <i class="fas fa-home d-block"></i> Home
+                                    </div>
+                                    <div class="port-item bg-warning">
+                                        <i class="fas fa-paperclip"></i> Resume
+                                    </div>
+                                    <div class="port-item bg-danger">
+                                        <i class="fab fa-github-square"></i> Github
+                                    </div>
+                                    <div class="port-item bg-info">
+                                        <i class="fas fa-address-card"></i> Contact
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade mt-5" id="floydModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="container">
+                <header id="main-header">
+                    <div class="rox no-gutters">
+                        <div class="col-lg-4 col-md-5">
+                            <img src="assets/images/floyd2.png" alt="">
+                        </div>
+                        <div class="col-lg-8 col-md-7">
+                            <div class="d-flex flex-column">
+                                <div class="p-2 bg-dark text-white"></div>
+                                <div class="name d-flex flex-row justify-content-between align-items-center">
+                                    <h1 class="display-5">
+                                        <%= ocMessages.ocPeople.floyd.translation_0 %>
+                                    </h1>
+                                    <i class="fab fa-facebook-square"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-github"></i>
+                                </div>
+                            </div>
+                            <div class="p-2 bg-black text-white">
+                                <%= ocMessages.ocPeople.floyd.translation_1 %>
+                            </div>
+                            <div>
+                                <div class="d-flex flex-row text-white align-items-stretch text-center">
+                                    <div class="port-item bg-primary">
+                                        <i class="fas fa-home d-block"></i> Home
+                                    </div>
+                                    <div class="port-item bg-warning">
+                                        <i class="fas fa-paperclip"></i> Resume
+                                    </div>
+                                    <div class="port-item bg-danger">
+                                        <i class="fab fa-github-square"></i> Github
+                                    </div>
+                                    <div class="port-item bg-info">
+                                        <i class="fas fa-address-card"></i> Contact
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
 </div>
 <% include partials/footer.ejs %>
 
