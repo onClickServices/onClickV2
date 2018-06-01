@@ -28,6 +28,7 @@
     "passport": "^0.4.0",
     "passport-http": "^0.3.0",
     "passport-local": "^1.0.0",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.14.3",
+    "tslint": "^5.10.0"
   }
 }
