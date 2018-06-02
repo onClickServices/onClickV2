@@ -65,7 +65,7 @@
 
         <div class="form-group fieldset contact">
             <label for=""><%= contactMessage %></label>
-            <textarea ID="editor" type="text" class="form-control mb-2"  placeholder="Your message" name="message"></textarea>
+            <textarea ID="" type="text" class="form-control mb-2"  placeholder="Your message" name="message"></textarea>
         </div>
 
         </br>
@@ -86,4 +86,10 @@
         .catch( error => {
             console.error( error );
         } );
+</script>
+
+<script>
+    $(document).ready( function() {
+        $('.dropdown-toggle').dropdown();
+    });
 </script>
