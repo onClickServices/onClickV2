@@ -162,6 +162,19 @@ footer .icons{
 
 /* End of dashboard styling */
 
+
 #thanks-para{
     font-weight: 200;
+
+/* Thank you page styling*/
+#thanks-header, #thanks-para{
+    text-align: center;
+    font-size: 1.5rem;
+}
+#thanks-para{
+    color: #fff;
+    font-weight: normal;
+}
+#thanks-header{
+    font-size: 3rem;
 }
