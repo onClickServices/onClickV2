@@ -176,7 +176,7 @@ router.get('/dashboard', (req, res) => {
         // If no errors render the dashboard and pass the found users to the template
         } else {
             res.render('dashboard', {
-                title: messages.pages.site.title.translation_0,
+                ocMessages: messages,
                 user: user
             });
         }

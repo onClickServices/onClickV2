@@ -1,4 +1,3 @@
-
 <!-- Latest compiled and bootstrap minified CSS -->
 <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 <!-- Custom Stylesheets -->
@@ -30,7 +29,7 @@
 <script type="text/javascript" src="../assets/js/ckeditor.js"></script>
 </head>
 
-<title><%= title %></title>
+<title><%= ocMessages.pages.site.title.translation_13 %></title> <!-- onClick | Dashboard -->
 
 <% include partials/navbar.ejs %>
 
@@ -40,16 +39,16 @@
         <div class="row">
             <div class="col-md-3">
                 <a href="#" class="btn btn-outline-primary btn-block" data-toggle="modal" data-target="#addPostModal"><i
-                            class="fa fa-plus"></i> Add post</a>
+                            class="fa fa-plus"></i><%= ocMessages.pages.dashboard.translation_0 %></a> <!-- Add Post -->
             </div>
             <div class="col-md-3">
                 <a href="#" class="btn btn-outline-success btn-block" data-toggle="modal" data-target="#addClientModal"><i
-                            class="fa fa-plus"></i> Clients</a>
+                            class="fa fa-plus"></i><%= ocMessages.pages.dashboard.translation_1 %></a>  <!-- Clients -->
             </div>
             <div class="col-md-3">
                 <a href="/portfolio" class="btn btn-outline-warning btn-block" data-toggle="modal"
-                   data-target="#clientsModal"><i
-                            class="fa fa-plus"></i> Portfolio</a>
+                   data-target="#portfolioModal"><i
+                            class="fa fa-plus"></i><%= ocMessages.pages.dashboard.translation_2 %></a> <!-- Portfolio -->
             </div>
         </div>
     </div>
@@ -61,54 +60,27 @@
             <div class="col-md-9">
                 <div class="card">
                     <div class="card-header">
-                        <h4> Client Name </h4>
+                        <h4 class="text-center"> <%= ocMessages.pages.dashboard.translation_3 %> </h4> <!-- Client List -->
                     </div>
                     <table class="table table-striped">
                         <thead class="thead-inverse">
                         <tr>
-                            <th>#Id</th>
-                            <th>Client</th>
-                            <th>Phone</th>
-                            <th>Message</th>
+                            <th><%= ocMessages.pages.dashboard.translation_4 %></th> <!-- Client Name -->
+                            <th><%= ocMessages.pages.dashboard.translation_5 %></th> <!-- Contact -->
+                            <th><%= ocMessages.pages.dashboard.translation_6 %></th> <!-- Message -->
                         </tr>
                         </thead>
                         <tbody>
+                        <% user.forEach(function (client) { %>
                         <tr>
-                            <td scope="row">2</td>
-                            <td>Name</td>
-                            <td>Contact</td>
-                            <td>Reason to call</td>
+                            <td><%= client.firstName %> <%= client.lastName %></td>
+                            <td>Phone: <%= client.phone %> E-mail: <%= client.email %></td>
+                            <td><%= client.message %></td>
+                            <td><a href="/details" class="btn btn-success btn-sm">Details
+                                    <i class="fas fa-info-circle"></i>
+                                </a></td>
                         </tr>
-                        <tr>
-                            <td scope="row">3</td>
-                            <td>Name</td>
-                            <td>Contact</td>
-                            <td>Reason to call</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3</td>
-                            <td>Name</td>
-                            <td>Contact</td>
-                            <td>Reason to call</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">4</td>
-                            <td>Name</td>
-                            <td>Contact</td>
-                            <td>Reason to call</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">5</td>
-                            <td>Name</td>
-                            <td>Contact</td>
-                            <td>Reason to call</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">6</td>
-                            <td>Name</td>
-                            <td>Contact</td>
-                            <td>Reason to call</td>
-                        </tr>
+                        <% }) %>
                         </tbody>
                     </table>
                 </div>
@@ -116,7 +88,7 @@
             <div class="col-md-3">
                 <div class="card text-center bg-primary text-white mb-3">
                     <div class="card-body">
-                        <h3>Clients</h3>
+                        <h3></i><%= ocMessages.pages.dashboard.translation_1 %></h3> <!-- Clients -->
                         <h1 class="display-4">
                             <i class="fas fa-users"></i>
                             <% for (var i = 0; i <= user.length; i++) { %>
@@ -127,16 +99,16 @@
                             <% } %>
                             <% } %>
                         </h1>
-                        <a href="/registered" class="btn btn-outline-light btn-sm">View</a>
+                        <a href="/registered" class="btn btn-outline-light btn-sm"><%= ocMessages.pages.dashboard.translation_7 %></a> <!-- View -->
                     </div>
                 </div>
                 <div class="card text-center bg-success text-white mb-3">
                     <div class="card-body">
-                        <h3>Projects</h3>
+                        <h3><%= ocMessages.pages.dashboard.translation_8 %></h3> <!-- Projects -->
                         <h1 class="display-4">
                             <i class="far fa-folder-open"></i> 6
                         </h1>
-                        <a href="/portfolio" class="btn btn-outline-light btn-sm">View</a>
+                        <a href="/portfolio" class="btn btn-outline-light btn-sm"><%= ocMessages.pages.dashboard.translation_7 %></a>   <!-- View -->
                     </div>
                 </div>
             </div>
@@ -146,48 +118,51 @@
 
 <% include partials/footer.ejs %>
 
+
+<!-- Add post modal -->
 <div class="modal fade" id="addPostModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title">Add Post</h5>
+                <h5 class="modal-title"><%= ocMessages.pages.dashboard.modals.translation_0 %></h5> <!-- Add Post -->
                 <button class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
             <div class="modal-body">
                 <form action="post">
                     <div class="form-group">
-                        <label for="title">Company</label>
+                        <label for="title"><%= ocMessages.pages.dashboard.modals.translation_1 %></label> <!-- Company -->
                         <input type="text" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="url">Url</label>
+                        <label for="url"><%= ocMessages.pages.dashboard.modals.translation_2 %></label> <!-- Url -->
                         <input type="text" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="description">Description</label>
+                        <label for="description"><%= ocMessages.pages.dashboard.modals.translation_3 %></label> <!-- Description -->
                         <textarea name="editor" type="text" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="file">Image</label>
+                        <label for="file"><%= ocMessages.pages.dashboard.modals.translation_4 %></label> <!-- Image -->
                         <input type="file" class="form-control-file">
-                        <small class="form-text text-muted">Max size 3mb</small>
+                        <small class="form-text text-muted"><%= ocMessages.pages.dashboard.modals.translation_5 %></small> <!-- Max size 3MB -->
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button class="btn btn-success" data-dismiss="modal">Submit</button>
+                <button class="btn btn-secondary" data-dismiss="modal"><%= ocMessages.buttons.translation_0 %></button> <!-- Close -->
+                <button class="btn btn-success" data-dismiss="modal"><%= ocMessages.buttons.translation_1 %></button> <!-- Submit -->
             </div>
         </div>
     </div>
 </div>
+<!-- End of add post modal -->
 
-
+<!-- Add client modal-->
 <div class="modal fade" id="addClientModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header bg-success text-white">
-                <h5 class="modal-title">Add Client</h5>
+                <h5 class="modal-title"><%= ocMessages.pages.dashboard.modals.translation_6 %></h5> <!-- Add Client -->
                 <button class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
             <div class="modal-body">
@@ -196,58 +171,59 @@
                     </br>
 
                     <div class="form-group">
-                        <label for=""></label>
+                        <label for=""><%= ocMessages.pages.dashboard.modals.translation_7 %></label> <!-- First Name -->
                         <input type="text" class="form-control mb-2" placeholder="First name" name="firstName" autofocus
                                required>
                     </div>
 
                     <div class="form-group">
-                        <label for=""></label>
+                        <label for=""><%= ocMessages.pages.dashboard.modals.translation_8 %></label> <!-- Last Name -->
                         <input type="text" class="form-control mb-2" placeholder="Last name" name="lastName" required>
                     </div>
 
                     <div class="form-group">
-                        <label for=""></label>
+                        <label for=""><%= ocMessages.pages.dashboard.modals.translation_9 %></label> <!-- Last Name -->
                         <input type="text" class="form-control mb-2" placeholder="555-555-0123" name="phone" required>
                     </div>
 
                     <div class="form-group">
-                        <label for=""></label>
+                        <label for=""><%= ocMessages.pages.dashboard.modals.translation_10 %></label> <!-- E-mail -->
                         <input type="email" class="form-control mb-2" placeholder="Someone@onclick.com" name="email">
 
 
                         <div class="form-group">
-                            <label for="">Do they need a website?</label>
+                            <label for=""><%= ocMessages.pages.dashboard.modals.translation_11 %></label> <!-- What are they looking for? -->
                             <input type="checkbox" class="" name="webVal">
                         </div>
 
                         <div class="form-group">
-                            <label for="">Do they need a logo?</label>
+                            <label for=""><%= ocMessages.pages.dashboard.modals.translation_12 %></label> <!-- What is their available budget? -->
+                            <input type="input" class="form-control" name="webVal">
+                        </div>
+
+                        <div class="form-group">
+                            <label for=""><%= ocMessages.pages.dashboard.modals.translation_13 %></label> <!-- Do they have ideas on what they want? -->
                             <input type="checkbox" class="" name="webVal">
                         </div>
 
                         <div class="form-group">
-                            <label for="">Do they have a hard copy of their logo idea?</label>
-                            <input type="checkbox" class="" name="webVal">
-                        </div>
-
-                        <div class="form-group">
-                            <label for=""></label>
-                            <textarea type="text" id="" class="form-control mb-2" placeholder="Your message"
+                            <label for="<%= ocMessages.pages.dashboard.modals.translation_14 %>"></label> <!-- Do they have anything else they want to add? -->
+                            <textarea type="text" id="" class="form-control mb-2" placeholder="Anything else to add?"
                                       name="message"></textarea>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button class="btn btn-success" data-dismiss="modal">Submit</button>
+                <button class="btn btn-secondary" data-dismiss="modal"><%= ocMessages.buttons.translation_0 %></button> <!-- Close -->
+                <button class="btn btn-success" data-dismiss="modal"><%= ocMessages.buttons.translation_1 %></button> <!-- Submit -->
             </div>
         </div>
     </div>
 </div>
+<!-- End of add client modal -->
 
-<div class="modal fade" id="clientsModal">
+<div class="modal fade" id="portfolioModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header bg-warning text-white">
@@ -279,10 +255,10 @@
 
 <script>
     ClassicEditor
-        .create( document.querySelector( '#editor' ), {
-            toolbar: [ 'bold', 'italic' ]
+        .create(document.querySelector('#editor'), {
+            toolbar: ['bold', 'italic']
         })
-        .catch( error => {
-            console.error( error );
-        } );
+        .catch(error => {
+            console.error(error);
+        });
 </script>
