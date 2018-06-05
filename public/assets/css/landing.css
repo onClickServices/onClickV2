@@ -1,9 +1,11 @@
+@import "oc_variables.css";
+
 * {
     margin: 0;
     padding: 0;
 }
 body {
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: "Century Gothic";
     font-weight: 700;
 }
 .welcome-section {
@@ -12,7 +14,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #87cefa;
+    background-color: var(--oc-alt-bg-color);
     overflow: hidden;
 }
 .welcome-section .content-wrap {
@@ -24,6 +26,11 @@ body {
 .welcome-section .content-wrap .fly-in-text {
     list-style: none;
 }
+
+li:first-child:first-letter {
+    color: var(--oc-green);
+}
+
 .welcome-section .content-wrap .fly-in-text li {
     display: inline-block;
     margin-right: 30px;
@@ -41,7 +48,7 @@ body {
     font-size: 1em;
     text-decoration: none;
     text-transform: uppercase;
-    color: #adff2f;
+    color: var(--oc-green);
     opacity: 1;
     transition: all 1s ease 2s;
 }
