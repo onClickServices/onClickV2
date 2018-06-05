@@ -37,11 +37,8 @@
 </head>
 
 <%  include partials/navbar.ejs %>
-
 <h1 class="text-center"><%= header %></h1>
-
 <br>
-
 
 <div class="container mb-2 mt-1">
 
@@ -51,3 +48,10 @@
 
 
 <%  include partials/footer.ejs %>
+
+<script>
+    $(document).ready( function() {
+        $('.dropdown-toggle').dropdown();
+    });
+</script>
+
