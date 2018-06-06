@@ -179,3 +179,12 @@ footer .icons{
 #thanks-header{
     font-size: 3rem;
 }
+
+/* Home screen media queries*/
+
+@media only screen and (max-width: 600px) {
+    .small-screen-green-text {
+        color: var(--oc-green);
+    }
+}
+/* End of home screen media queries */
