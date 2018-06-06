@@ -27,7 +27,7 @@ body {
     list-style: none;
 }
 
-li:first-child:first-letter {
+.fly-in-text li:first-child:first-letter {
     color: var(--oc-green);
 }
 
