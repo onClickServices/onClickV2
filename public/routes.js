@@ -75,7 +75,8 @@ router.get('/contact', (req, res) => {
         contactLastName: messages.contact.translation_1,
         contactPhone: messages.contact.translation_3,
         contactEmail: messages.contact.translation_2,
-        contactMessage: messages.contact.translation_4
+        contactMessage: messages.contact.translation_4,
+        ocMessages: messages
     });
 });
 
