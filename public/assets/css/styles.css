@@ -137,16 +137,19 @@ border-bottom: 8px solid var(--oc-alt-green);
 /* End of contact styling */
 
 /* Footer styling */
+/*Added text-align property to center icons and text in footer*/
 footer {
     background-color: var(--oc-main-bg-color)!important;
+    text-align: center;
 }
-
+/*Added margin 0 and padding 0 to links for better icon spacing*/
 footer a{
     color: var(--oc-white);
+    margin: 0;
+    padding: 0;
 }
-
+/*took margin-left property off to be able to center icons*/
 footer .icons{
-    margin-left: 505px;
     color: var(--oc-white);
 }
 
