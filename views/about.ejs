@@ -37,37 +37,38 @@
     <hr id="page-break">
     <div class="row">
         <div class="col-lg-6 pic container-fluid mt-4">
-            <img class="float-right" src="assets/images/byron2.png" alt="Byron's pic" id="byron">
+            <img class="img-fluid float-right" src="assets/images/byron2.png" alt="Byron's pic" id="byron">
             <div class="text-center">
                 <h3 class=""><%= ocMessages.pages.about.translation_1 %></h3> <!-- Byron Buyck -->
                 <p class="text-white"><%= ocMessages.pages.about.translation_2 %></p> <!-- Lead Software Developer -->
             </div>
             <hr>
             <ul>
-                <li><%= ocMessages.pages.about.translation_3 %></li> <!-- Java -->
-                <li><%= ocMessages.pages.about.translation_4 %></li> <!-- JavaScript -->
-                <li><%= ocMessages.pages.about.translation_5 %></li> <!-- React -->
-                <li><%= ocMessages.pages.about.translation_11 %></li> <!-- Adobe CC -->
-                <li><%= ocMessages.pages.about.translation_12 %></li> <!-- HTML / CSS3 -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_3 %></li> <!-- Java -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_4 %></li> <!-- JavaScript -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_5 %></li> <!-- React -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_11 %></li> <!-- Adobe CC -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_12 %></li> <!-- HTML / CSS3 -->
             </ul>
         </div>
+        <!--added img-fluid class to all images-->
         <div class="col-lg-6 pic container-fluid mt-4">
-            <img class="float-right" src="assets/images/pcra.png" alt="Perry's pic" id="perry">
+            <img class="img-fluid float-right" src="assets/images/pcra.png" alt="Perry's pic" id="perry">
             <div class="text-center">
                 <h3 class="text-center"><%= ocMessages.pages.about.translation_6 %></h3> <!-- Perry Craft -->
                 <p class="text-white"><%= ocMessages.pages.about.translation_7 %></p> <!-- Lead Web Developer -->
                 <hr>
             </div>
             <ul>
-                <li><%= ocMessages.pages.about.translation_8 %></li> <!-- Mongo DB -->
-                <li><%= ocMessages.pages.about.translation_9 %></li> <!-- AngularJs -->
-                <li><%= ocMessages.pages.about.translation_10 %></li> <!-- Angular -->
-                <li><%= ocMessages.pages.about.translation_4 %></li> <!-- JavaScript -->
-                <li><%= ocMessages.pages.about.translation_12 %></li> <!-- HTML / CSS3 -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_8 %></li> <!-- Mongo DB -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_9 %></li> <!-- AngularJs -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_10 %></li> <!-- Angular -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_4 %></li> <!-- JavaScript -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_12 %></li> <!-- HTML / CSS3 -->
             </ul>
         </div>
         <div class="col-lg-6 pic container-fluid mt-4">
-            <img class="float-right" src="assets/images/floyd2.png" alt="Floyd's pic" id="floyd">
+            <img class="img-fluid float-right" src="assets/images/floyd2.png" alt="Floyd's pic" id="floyd">
             <div class="text-center">
                 <h3><%= ocMessages.pages.about.translation_13 %></h3> <!-- Floyd Holt -->
                 <p class="text-white"><%= ocMessages.pages.about.translation_14 %></p>
@@ -75,21 +76,22 @@
                 <hr>
             </div>
             <ul>
-                <li><%= ocMessages.pages.about.translation_12 %></li> <!-- HTML / CSS3 -->
-                <li><%= ocMessages.pages.about.translation_4 %></li> <!-- Javascript -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_12 %></li> <!-- HTML / CSS3 -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_4 %></li> <!-- Javascript -->
             </ul>
         </div>
         <div class="col-lg-6 pic container-fluid mt-4">
-            <img class="float-right" src="assets/images/phil.jpg" alt="Phil's pic" id="phil">
+            <img class="img-fluid float-right" src="assets/images/phil.jpg" alt="Phil's pic" id="phil">
             <div class="text-center">
                 <h3><%= ocMessages.pages.about.translation_15 %></h3> <!-- Philip Simmons -->
                 <p class="text-white"><%= ocMessages.pages.about.translation_16 %></p> <!-- Creative Director -->
                 <hr>
             </div>
             <ul>
-                <li><%= ocMessages.pages.about.translation_11 %></li> <!-- Adobe CC -->
-                <li><%= ocMessages.pages.about.translation_12 %></li> <!-- HTML / CSS3
-                <li><%= ocMessages.pages.about.translation_4 %></li> <!-- Javascript -->
+            <!--list was missing ending carrot on last element here-->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_11 %></li> <!-- Adobe CC -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_12 %></li> <!-- HTML / CSS3 -->
+                <li class="text-lg-left text-center"><%= ocMessages.pages.about.translation_4 %></li> <!-- Javascript -->
             </ul>
         </div>
     </div>
@@ -313,8 +315,7 @@
         </div>
     </div>
 </div>
-<% include partials/footer.ejs %>
-
+<!--There was an extra footer partial here-->
 <div class="modal fade mt-5" id="perryModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
