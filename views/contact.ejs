@@ -1,4 +1,3 @@
-
 <!-- Latest compiled and bootstrap minified CSS -->
 <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 <!-- Custom Stylesheets -->
@@ -33,48 +32,53 @@
 
 <title><%= title %></title>
 
-<% include partials/navbar.ejs%>
+<% include partials/navbar.ejs %>
 
 <div class="container text-center">
-    <h1 class="display-4"><%= ocMessages.pages.contact.translation_0 %>  %></h1>
+    <h1 class="display-4"><%= ocMessages.pages.contact.translation_0 %>
+        %>
+    </h1>
 </div>
 <div class="formbox">
 
-    <form action="/contact" method="POST" id="contactPage" class="form">
+    <div class="container">
+        <form action="/contact" method="POST" id="contactPage" class="form">
 
-        </br>
+            </br>
+            <div class="form-group fieldset contact">
+                <label for=""><%= contactFirstName %></label>
+                <input type="text" class="form-control mb-2" placeholder="First name" name="firstName" autofocus
+                       required>
+            </div>
 
-        <div class="form-group fieldset contact">
-            <label for=""><%= contactFirstName %></label>
-            <input type="text" class="form-control mb-2"  placeholder="First name"  name="firstName" autofocus required>
-        </div>
+            <div class="form-group fieldset contact">
+                <label for=""><%= contactLastName %></label>
+                <input type="text" class="form-control mb-2" placeholder="Last name" name="lastName" required>
+            </div>
 
-        <div class="form-group fieldset contact">
-            <label for=""><%= contactLastName %></label>
-            <input type="text" class="form-control mb-2"  placeholder="Last name"  name="lastName" required>
-        </div>
+            <div class="form-group fieldset contact">
+                <label for=""><%= contactPhone %></label>
+                <input type="text" class="form-control mb-2" placeholder="555-555-0123" name="phone" required>
+            </div>
 
-        <div class="form-group fieldset contact">
-            <label for=""><%= contactPhone %></label>
-            <input type="text" class="form-control mb-2"  placeholder="555-555-0123"  name="phone" required>
-        </div>
+            <div class="form-group fieldset contact">
+                <label for=""><%= contactEmail %></label>
+                <input type="email" class="form-control mb-2" placeholder="Someone@onclick.com" name="email">
+            </div>
 
-        <div class="form-group fieldset contact">
-            <label for=""><%= contactEmail %></label>
-            <input type="email" class="form-control mb-2" placeholder="Someone@onclick.com" name="email">
-        </div>
+            <div class="form-group fieldset contact">
+                <label for=""><%= contactMessage %></label>
+                <textarea ID="" type="text" class="form-control mb-2" placeholder="Your message"
+                          name="message"></textarea>
+            </div>
 
-        <div class="form-group fieldset contact">
-            <label for=""><%= contactMessage %></label>
-            <textarea ID="" type="text" class="form-control mb-2"  placeholder="Your message" name="message"></textarea>
-        </div>
+            </br>
 
-        </br>
-
-        <div class="form-group fieldset">
-            <button class="btn btn-primary" type="submit">Submit</button>
-        </div>
-    </form>
+            <div class="form-group fieldset">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
 </div>
 
 <% include partials/footer.ejs %>
@@ -88,7 +92,7 @@
 </script>
 
 <script>
-    $(document).ready( function() {
+    $(document).ready(function () {
         $('.dropdown-toggle').dropdown();
     });
 </script>
