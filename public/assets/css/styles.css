@@ -100,34 +100,7 @@ border-bottom: 8px solid var(--oc-alt-green);
 
 /* Homepage styling*/
 
-/* Jumbotron Styling */
-.jumbotron-fluid {
-    background-image: url("../images/black-and-white-blur-gray-34088.jpg");
-    background-size: cover;
-    color: var(--oc-white);
-    height: 40rem;
-    padding-top: 8rem;
-}
-.jumbotron-fluid a {
-    color: var(--oc-main-bg-color);
-    font-weight: bold;
-}
-.jumbotron-fluid a:hover {
-    color: var(--oc-green);
-}
-.jumbotron-fluid p {
-    font-size: 1rem;
-}
 
-.oc-span {
-    color: var(--oc-green);
-}
-
-.btn{
-    background-color: var(--oc-main-bg-color);
-    color: var(--oc-white);
-}
-/* End of jumbotron styling */
 
 /* End of homepage styling */
 
