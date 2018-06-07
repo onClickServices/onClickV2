@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 <!-- Custom Stylesheets -->
 <link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="../assets/css/contact.css">
 
 
 <!--Font Awesome-->
@@ -35,9 +36,9 @@
 <% include partials/navbar.ejs%>
 
 <div class="container text-center">
-    <h1 class="lead display-3"><%= ocMessages.pages.contact.translation_0 %>  %></h1>
+    <h1 class="display-4"><%= ocMessages.pages.contact.translation_0 %>  %></h1>
 </div>
-<div class="container">
+<div class="formbox">
 
     <form action="/contact" method="POST" id="contactPage" class="form">
 

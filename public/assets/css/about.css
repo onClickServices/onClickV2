@@ -7,6 +7,7 @@ h1{
 }
 
 .pic img{
+    background-position: center;
     margin: 0 auto;
 }
 .founders ul{
@@ -16,4 +17,8 @@ h1{
     border: .5rem solid #59B069;
     width: 100%;
     margin-top: 2rem;
+}
+
+.container {
+    margin-top: 6rem;
 }
