@@ -27,10 +27,10 @@
         crossorigin="anonymous"></script>
 
 <!-- Editor -->
-<script type="text/javascript" src="../assets/js/ckeditor.js"></script>
+<script type="text/javascript" src="assets/js/ckeditor.js"></script>
 </head>
 
-<title><%= title %></title>
+<title><%= ocMessages.pages.site.title.translation_2 %></title>
 
 <% include partials/navbar.ejs %>
 
@@ -46,36 +46,36 @@
 
             </br>
             <div class="form-group fieldset contact">
-                <label for=""><%= contactFirstName %></label>
+                <label for=""><%= ocMessages.contact.translation_0 %></label>
                 <input type="text" class="form-control mb-2" placeholder="First name" name="firstName" autofocus
                        required>
             </div>
 
             <div class="form-group fieldset contact">
-                <label for=""><%= contactLastName %></label>
+                <label for=""><%= ocMessages.contact.translation_1 %></label>
                 <input type="text" class="form-control mb-2" placeholder="Last name" name="lastName" required>
             </div>
 
             <div class="form-group fieldset contact">
-                <label for=""><%= contactPhone %></label>
+                <label for=""><%= ocMessages.contact.translation_3 %></label>
                 <input type="text" class="form-control mb-2" placeholder="555-555-0123" name="phone" required>
             </div>
 
             <div class="form-group fieldset contact">
-                <label for=""><%= contactEmail %></label>
+                <label for=""><%= ocMessages.contact.translation_2 %></label>
                 <input type="email" class="form-control mb-2" placeholder="Someone@onclick.com" name="email">
             </div>
 
             <div class="form-group fieldset contact">
-                <label for=""><%= contactMessage %></label>
-                <textarea ID="" type="text" class="form-control mb-2" placeholder="Your message"
+                <label for=""><%= ocMessages.contact.translation_4 %></label>
+                <textarea id="" type="text" class="form-control mb-2" placeholder="Your message"
                           name="message"></textarea>
             </div>
 
             </br>
 
             <div class="form-group fieldset">
-                <button class="btn btn-primary" type="submit">Submit</button>
+                <button class="btn btn-primary" type="submit"><%= ocMessages.buttons.translation_1 %></button>
             </div>
         </form>
     </div>
