@@ -6,3 +6,7 @@
 
     margin: 0 10rem;
 }
+
+.card-body {
+    background: var(--oc-alt-bg-color);
+}

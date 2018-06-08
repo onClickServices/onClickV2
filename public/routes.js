@@ -55,13 +55,6 @@ router.get('/services', (req, res) => {
 
     // Render the services page
     res.render('services', {
-        title: messages.pages.site.title.translation_1,
-        pageHeader: messages.pages.servicePage.translation_0,
-        pageLead: messages.pages.servicePage.translation_1,
-        cardBodyOne: cardBodyOne,
-        cardBodyTwo: cardBodyTwo,
-        cardBodyThree: cardBodyThree,
-        contactButton: messages.pages.site.translation_2,
         ocMessages: messages
     });
 });
@@ -69,13 +62,6 @@ router.get('/services', (req, res) => {
 // Fetch contact page
 router.get('/contact', (req, res) => {
     res.render('contact', {
-        title: messages.pages.site.title.translation_2,
-        pageTitle: messages.pages.about.translation_1,
-        contactFirstName: messages.contact.translation_0,
-        contactLastName: messages.contact.translation_1,
-        contactPhone: messages.contact.translation_3,
-        contactEmail: messages.contact.translation_2,
-        contactMessage: messages.contact.translation_4,
         ocMessages: messages
     });
 });
@@ -108,9 +94,7 @@ router.post('/contact', (req, res) => {
 router.get('/thanks', (req, res) => {
     // Render the thank you page
     res.render('thanks', {
-        title: messages.pages.site.title.translation_3,
-        header: 'Thank you for contacting onClick',
-        body: 'Please expect a call from us within 24 hrs'
+        ocMessages: messages
     });
 });
 
@@ -126,9 +110,7 @@ router.get('/portfolio', (req, res) => {
 router.get('/error', (req, res) => {
    // Render the error page
    res.render('error', {
-       title: messages.pages.site.title.translation_4,
-       errorMessage: messages.pages.site.title.translation_4,
-       messageToUser: messages.error.translation_0
+       ocMessages: messages
    });
 });
 
