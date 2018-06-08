@@ -262,7 +262,7 @@ router.get('/', (req, res) => {
     // Render the landing page
     res.render('landing', {
         ocMessages: messages,
-        introText: introText
+        introText
     })
 });
 
