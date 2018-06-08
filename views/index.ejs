@@ -24,16 +24,28 @@
     <% include ./partials/jumbotron.ejs %>
 
     <!-- Main content here --> 
-<div class="container">  
-<!-- added container so text stays within margins for mobile -->
-    <section class="whoAreWe">
-        <h1 class="my-4">Who Are We?</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolores quod ratione rem repellendus. Adipisci corporis cumque doloribus earum esse nam obcaecati sequi similique totam vitae? Consequatur dolore voluptas voluptatibus!</p>
-    </section>
+<div class="container-fluid d-lg-flex d-md-inline-flex d-sm-block mx-0 my-4 px-5">
 
-    <section class="whatWeDo">
-            <h1 class="my-4">What We Do!</h1>
-            <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis corporis dignissimos dolor doloremque eaque, explicabo fugit incidunt nam nisi omnis quaerat, quidem quisquam ratione sequi sint temporibus. Ipsum, modi?</p>
+<!-- added container so text stays within margins for mobile -->
+    <section class="whoWhatHow d-lg-flex d-md-inline-flex d-sm-block mx-0 my-4 px-5 py-5 bg-light">
+
+        <div class="whoAreWe col-lg-4 col-md-3 col-sm-1 d-block">
+            <i class="fas fa-power-off fa-7x float-left p-2"></i>
+            <h1 class="my-4 p-2 d-block">Who Are We?</h1>
+            <p class="m-4">We are dedicated developers of dynamic websites and applications. Curators of all things creative (and do mean ALL!). Masters at making your marketing dreams a reality! We are onClick Services, here for all your business needs! </p>
+        </div>
+
+        <div class="whatWeDo col-lg-4 col-md-3 col-sm-1 d-block">
+                <i class="fas fa-globe fa-7x float-left p-2"></i>
+                <h1 class="my-4 p-2 d-block">What We Do?</h1>
+                <p class="m-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis corporis dignissimos dolor doloremque eaque, explicabo fugit incidunt nam nisi omnis quaerat, quidem quisquam ratione sequi sint temporibus. Ipsum, modi?</p>
+        </div>
+
+        <div class="howWeWork col-lg-4 col-md-3 col-sm-1 d-block">
+            <i class="fas fa-sitemap fa-7x float-left p-2"></i>
+            <h1 class="my-4 p-2 d-block">How We Work?</h1>
+            <p class="m-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam blanditiis corporis dignissimos dolor doloremque eaque, explicabo fugit incidunt nam nisi omnis quaerat, quidem quisquam ratione sequi sint temporibus. Ipsum, modi?</p>
+        </div>
     </section>
     <!-- End main content -->
 </div>
