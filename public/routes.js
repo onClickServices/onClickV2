@@ -26,7 +26,8 @@ router.use(expressValidator({
 router.get('/home', (req, res) => {
     // Render index page
     res.render('index', {
-        title: ocMessages.pages.site.title.translation_0
+        title: ocMessages.pages.site.title.translation_0,
+        ocMessages
     });
 });
 

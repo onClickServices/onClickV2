@@ -116,20 +116,10 @@ border-bottom: 8px solid var(--oc-alt-green);
 .fa-sitemap{
     color: var(--oc-yellow);
 }
-
-
-
-    /* End of homepage styling */
-
-/* Services styling */
-.services {
-    background: var(--oc-alt-bg-color);
+.oc-border-right {
+    border-right: 1px solid var(--oc-green);
 }
-/* End of services styling */
-
-/* Contact styling */
-
-/* End of contact styling */
+    /* End of homepage styling */
 
 /* Footer styling */
 /*Added text-align property to center icons and text in footer*/
