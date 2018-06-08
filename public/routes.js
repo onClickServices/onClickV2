@@ -1,6 +1,6 @@
 let express = require('express');
 let router = express.Router();
-let messages = require('../lib/typings/text');
+let ocMessages = require('../lib/typings/text');
 let User = require('../lib/models/user');
 let Admin = require('../lib/models/admin');
 const expressValidator = require('express-validator');
@@ -26,7 +26,7 @@ router.use(expressValidator({
 router.get('/home', (req, res) => {
     // Render index page
     res.render('index', {
-        title: messages.pages.site.title.translation_0
+        title: ocMessages.pages.site.title.translation_0
     });
 });
 
@@ -34,51 +34,42 @@ router.get('/home', (req, res) => {
 router.get('/services', (req, res) => {
     // Variables for service page
     let cardBodyOne =  [
-            messages.pages.servicePage.translation_5,
-            messages.pages.servicePage.translation_6,
-            messages.pages.servicePage.translation_7,
-            messages.pages.servicePage.translation_8,
-            messages.pages.servicePage.translation_9
+            ocMessages.pages.servicePage.translation_5,
+            ocMessages.pages.servicePage.translation_6,
+            ocMessages.pages.servicePage.translation_7,
+            ocMessages.pages.servicePage.translation_8,
+            ocMessages.pages.servicePage.translation_9
         ];
     let cardBodyTwo = [
-            messages.pages.servicePage.translation_19,
-            messages.pages.servicePage.translation_20,
-            messages.pages.servicePage.translation_21,
-            messages.pages.servicePage.translation_21,
+            ocMessages.pages.servicePage.translation_19,
+            ocMessages.pages.servicePage.translation_20,
+            ocMessages.pages.servicePage.translation_21,
+            ocMessages.pages.servicePage.translation_21,
     ];
     let cardBodyThree = [
-            messages.pages.servicePage.translation_13,
-            messages.pages.servicePage.translation_14,
-            messages.pages.servicePage.translation_15,
-            messages.pages.servicePage.translation_16,
+            ocMessages.pages.servicePage.translation_13,
+            ocMessages.pages.servicePage.translation_14,
+            ocMessages.pages.servicePage.translation_15,
+            ocMessages.pages.servicePage.translation_16,
     ];
 
     // Render the services page
     res.render('services', {
-        title: messages.pages.site.title.translation_1,
-        pageHeader: messages.pages.servicePage.translation_0,
-        pageLead: messages.pages.servicePage.translation_1,
-        cardBodyOne: cardBodyOne,
-        cardBodyTwo: cardBodyTwo,
-        cardBodyThree: cardBodyThree,
-        contactButton: messages.pages.site.translation_2,
-        ocMessages: messages
+        cardBodyOne,
+        cardBodyTwo,
+        cardBodyThree,
+        ocMessages
     });
 });
 
 // Fetch contact page
 router.get('/contact', (req, res) => {
     res.render('contact', {
-        title: messages.pages.site.title.translation_2,
-        pageTitle: messages.pages.about.translation_1,
-        contactFirstName: messages.contact.translation_0,
-        contactLastName: messages.contact.translation_1,
-        contactPhone: messages.contact.translation_3,
-        contactEmail: messages.contact.translation_2,
-        contactMessage: messages.contact.translation_4,
-        ocMessages: messages
+        ocMessages
     });
 });
+
+
 
 // Grab and post contact information
 router.post('/contact', (req, res) => {
@@ -108,9 +99,7 @@ router.post('/contact', (req, res) => {
 router.get('/thanks', (req, res) => {
     // Render the thank you page
     res.render('thanks', {
-        title: messages.pages.site.title.translation_3,
-        header: 'Thank you for contacting onClick',
-        body: 'Please expect a call from us within 24 hrs'
+        ocMessages
     });
 });
 
@@ -118,17 +107,17 @@ router.get('/thanks', (req, res) => {
 router.get('/portfolio', (req, res) => {
    // Render the portfolio page
    res.render('portfolio', {
-       title: messages.pages.site.title.translation_5
+       title: ocMessages.pages.site.title.translation_5
    });
 });
+
+
 
 // Fetch the error page
 router.get('/error', (req, res) => {
    // Render the error page
    res.render('error', {
-       title: messages.pages.site.title.translation_4,
-       errorMessage: messages.pages.site.title.translation_4,
-       messageToUser: messages.error.translation_0
+       ocMessages
    });
 });
 
@@ -142,8 +131,8 @@ router.get('/registered', (req, res) => {
         // If no errors render the registered page
         } else {
             res.render('registered', {
-                title: messages.pages.site.title.translation_6,
-                header: messages.pages.registered.translation_1,
+                title: ocMessages.pages.site.title.translation_6,
+                header: ocMessages.pages.registered.translation_1,
                 user: user
             });
         }
@@ -154,7 +143,7 @@ router.get('/registered', (req, res) => {
 router.get('/portfolio', (req,res) => {
    // Render the portfolio page
    res.render('portfolio', {
-       title: messages.pages.site.title.translation_5
+       title: ocMessages.pages.site.title.translation_5
    })
 });
 
@@ -162,10 +151,17 @@ router.get('/portfolio', (req,res) => {
 router.get('/about', (req, res) => {
     // Render the about page
     res.render('about', {
-        ocMessages: messages
+        ocMessages
     });
 });
 
+// Fetch the questionnaire page
+router.get('/questionnaire', (req, res) => {
+    // Render the about page
+    res.render('questionnaire', {
+        ocMessages
+    });
+});
 
 // Fetch the dashboard page
 router.get('/dashboard', (req, res) => {
@@ -177,8 +173,8 @@ router.get('/dashboard', (req, res) => {
         // If no errors render the dashboard and pass the found users to the template
         } else {
             res.render('dashboard', {
-                ocMessages: messages,
-                user: user
+                ocMessages,
+                user
             });
         }
     });
@@ -194,8 +190,8 @@ router.get('/details', (req, res) => {
         //     If no error render the details page and pass along the single user
         } else {
             res.render('details', {
-                title: messages.pages.site.title.translation_9,
-                user: user
+                title: ocMessages.pages.site.title.translation_9,
+                user
             });
         }
     });
@@ -205,13 +201,13 @@ router.get('/details', (req, res) => {
 router.get('/adminRegister', (req, res) => {
    // Render the admin registration page
    res.render('adminRegister', {
-       title: messages.pages.site.title.translation_10,
-       pageTitle: messages.pages.admin.translation_7,
-       adminRegFirstName: messages.pages.admin.translation_0,
-       adminRegLastName: messages.pages.admin.translation_1,
-       adminRegUsername: messages.pages.admin.translation_2,
-       adminRegPassword: messages.pages.admin.translation_3,
-       adminRegPasswordConfirm: messages.pages.admin.translation_5,
+       title: ocMessages.pages.site.title.translation_10,
+       pageTitle: ocMessages.pages.admin.translation_7,
+       adminRegFirstName: ocMessages.pages.admin.translation_0,
+       adminRegLastName: ocMessages.pages.admin.translation_1,
+       adminRegUsername: ocMessages.pages.admin.translation_2,
+       adminRegPassword: ocMessages.pages.admin.translation_3,
+       adminRegPasswordConfirm: ocMessages.pages.admin.translation_5,
    });
 });
 
@@ -248,28 +244,28 @@ router.post('/adminRegister', (req, res) => {
 router.get('/adminLogin', (req, res) => {
    // Render the admin page
    res.render('adminLogin', {
-       title: messages.pages.site.title.translation_11,
-       pageTitle: messages.pages.admin.translation_4,
-       adminUsername: messages.pages.admin.translation_2,
-       adminPassword: messages.pages.admin.translation_3
+       title: ocMessages.pages.site.title.translation_11,
+       pageTitle: ocMessages.pages.admin.translation_4,
+       adminUsername: ocMessages.pages.admin.translation_2,
+       adminPassword: ocMessages.pages.admin.translation_3
    })
 });
 
 // Fetch landing page
 router.get('/', (req, res) => {
     let introText = [
-      messages.pages.landing.translation_0,
-      messages.pages.landing.translation_1,
-      messages.pages.landing.translation_2,
-      messages.pages.landing.translation_3,
-      messages.pages.landing.translation_4,
-      messages.pages.landing.translation_5,
-      messages.pages.landing.translation_6
+      ocMessages.pages.landing.translation_0,
+      ocMessages.pages.landing.translation_1,
+      ocMessages.pages.landing.translation_2,
+      ocMessages.pages.landing.translation_3,
+      ocMessages.pages.landing.translation_4,
+      ocMessages.pages.landing.translation_5,
+      ocMessages.pages.landing.translation_6
     ];
     // Render the landing page
     res.render('landing', {
-        ocMessages: messages,
-        introText: introText
+        ocMessages,
+        introText
     })
 });
 
