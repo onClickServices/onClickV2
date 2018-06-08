@@ -18,14 +18,17 @@ body{
     background-color: var(--oc-alt-bg-color);
     margin: 0 0;
 }
-;.form-control {
+
+.form-control {
     border: 0px solid;
     border-bottom:1px solid;
     border-bottom-color: var(--oc-green);
 }
+
 .btn:hover{
 background-color: var(--oc-green);
 }
+
 .btn-outline-primary{
     border-color: var(--oc-green);
     color: var(--oc-green);
@@ -102,9 +105,20 @@ border-bottom: 8px solid var(--oc-alt-green);
 
 /* Homepage styling*/
 
+.fa-power-off{
+    color: var(--oc-green);
+}
+
+.fa-globe {
+    color: var(--oc-blue);
+}
+
+.fa-sitemap{
+    color: var(--oc-yellow);
+}
 
 
-/* End of homepage styling */
+    /* End of homepage styling */
 
 /* Services styling */
 .services {
