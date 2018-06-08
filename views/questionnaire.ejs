@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!--animate js-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/questionnaire.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<!--animate js -->
+
+
+    <!-- Editor -->
+    <script src="//cdn.ckeditor.com/4.9.2/full/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
+
+</head>
+<%  include partials/navbar.ejs %>
+<title>QUESTIONNAIRE</title>
+
+<body>
+
+<form>
+<div class="container questionnaireForm">
+
+    <!--questionnaire 1 -->
+    <div class="form-group questionnaire1">
+        <label for="formGroupExampleInput" class="animated fadeIn"><%= ocMessages.pages.questionnaire.translation_0 %></label>
+        <input type="text" class="form-control" name="question1" id="formGroupExampleInput" placeholder="">
+        <label for="formGroupExampleInput" class="animated fadeIn"><%= ocMessages.pages.questionnaire.translation_1 %></label>
+        <input type="text" class="form-control" name="question2" id="formGroupExampleInput" placeholder="">
+    </div>
+
+    <!--questionnaire 2 -->
+    <div class="form-group questionnaire2">
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1" class="animated fadeIn"><%= ocMessages.pages.questionnaire.translation_2 %></label>
+            <textarea class="form-control" name="questionnaire2" name="question3" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+    </div>
+
+    <!--questionnaire 3 -->
+    <div class="form-group questionnaire3">
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1" class="animated fadeIn"><%= ocMessages.pages.questionnaire.translation_3 %></label>
+            <textarea class="form-control" name="question4" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+    </div>
+
+    <!--questionnaire 4 -->
+    <div class="form-row align-items-center">
+        <div class="col-auto my-1">
+            <label class="mr-sm-2" for="inlineFormCustomSelect"><%= ocMessages.pages.questionnaire.translation_4 %></label>
+            <select class="custom-select mr-sm-2" name="question5" id="inlineFormCustomSelect">
+                <option selected>Choose...</option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+            </select>
+
+            <label class="mr-sm-2" for="inlineFormCustomSelect"><%= ocMessages.pages.questionnaire.translation_5 %></label>
+            <select class="custom-select mr-sm-2" name="question6" id="inlineFormCustomSelect">
+                <option selected>Choose...</option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+            </select>
+        </div>
+    </div>
+
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <form method="post">
+                    <div class="form-group">
+                        <label class="control-label " for="date"><%= ocMessages.pages.questionnaire.translation_6 %>
+                        </label>
+                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <button class="btn btn-success btn-lg pull-right" name="submit" type="submit">
+                                Send!
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+</form>
+
+<%  include partials/footer.ejs %>
+<!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+<!-- Include jQuery -->
+
+<script>
+    $(document).ready(function(){
+        var date_input=$('input[name="date"]'); //our date input has the name "date"
+        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
+</script>
+
+
+</body>
+</html>
