@@ -10,7 +10,9 @@
     padding-top: 8rem;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
 }
+
 .jumbotron-fluid a {
     color: var(--oc-main-bg-color);
     font-weight: bold;
