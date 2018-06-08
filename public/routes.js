@@ -80,6 +80,8 @@ router.get('/contact', (req, res) => {
     });
 });
 
+
+
 // Grab and post contact information
 router.post('/contact', (req, res) => {
     // New user schema from lib/models/user.js
@@ -121,6 +123,8 @@ router.get('/portfolio', (req, res) => {
        title: messages.pages.site.title.translation_5
    });
 });
+
+
 
 // Fetch the error page
 router.get('/error', (req, res) => {
@@ -166,6 +170,13 @@ router.get('/about', (req, res) => {
     });
 });
 
+// Fetch the questionnaire page
+router.get('/questionnaire', (req, res) => {
+    // Render the about page
+    res.render('questionnaire', {
+        ocMessages: messages
+    });
+});
 
 // Fetch the dashboard page
 router.get('/dashboard', (req, res) => {
