@@ -47,14 +47,22 @@
 
 </head>
 <%  include partials/navbar.ejs %>
-<title>QUESTIONNAIRE</title>
+<title>onClick</title>
 
 <body>
 
 <form>
+
+
 <div class="container questionnaireForm">
 
-    <!--questionnaire 1 -->
+    <!--Title for page-->
+    <div class="services px-3 py-3 pt-md-5 pb-md-4 mt-3 mx-auto text-center">
+        <h1 class="display-4 mt-4"><%= ocMessages.pages.questionnaire.translation_7 %></h1>
+        <p class="lead"><%= ocMessages.pages.questionnaire.translation_8 %></p>
+    </div>
+
+    <!--questionnaire 1 and 2 -->
     <div class="form-group questionnaire1">
         <label for="formGroupExampleInput" class="animated fadeIn"><%= ocMessages.pages.questionnaire.translation_0 %></label>
         <input type="text" class="form-control" name="question1" id="formGroupExampleInput" placeholder="">
@@ -62,34 +70,42 @@
         <input type="text" class="form-control" name="question2" id="formGroupExampleInput" placeholder="">
     </div>
 
-    <!--questionnaire 2 -->
+    <!--questionnaire 3 -->
     <div class="form-group questionnaire2">
         <div class="form-group">
             <label for="exampleFormControlTextarea1" class="animated fadeIn"><%= ocMessages.pages.questionnaire.translation_2 %></label>
-            <textarea class="form-control" name="questionnaire2" name="question3" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" name="question3" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
     </div>
 
-    <!--questionnaire 3 -->
-    <div class="form-group questionnaire3">
+    <!--questionnaire 4 -->
+    <div class="form-group questionnaire2">
         <div class="form-group">
-            <label for="exampleFormControlTextarea1" class="animated fadeIn"><%= ocMessages.pages.questionnaire.translation_3 %></label>
+            <label for="exampleFormControlTextarea1" class="animated fadeIn"><%= ocMessages.pages.questionnaire.translation_9 %></label>
             <textarea class="form-control" name="question4" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
     </div>
 
     <!--questionnaire 4 -->
+    <div class="form-group questionnaire3">
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1" class="animated fadeIn"><%= ocMessages.pages.questionnaire.translation_3 %></label>
+            <textarea class="form-control" name="question5" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+    </div>
+
+    <!--questionnaire 6 and 7 -->
     <div class="form-row align-items-center">
         <div class="col-auto my-1">
             <label class="mr-sm-2" for="inlineFormCustomSelect"><%= ocMessages.pages.questionnaire.translation_4 %></label>
-            <select class="custom-select mr-sm-2" name="question5" id="inlineFormCustomSelect">
+            <select class="custom-select mr-sm-2" name="question6" id="inlineFormCustomSelect">
                 <option selected>Choose...</option>
                 <option value="1">Yes</option>
                 <option value="2">No</option>
             </select>
 
             <label class="mr-sm-2" for="inlineFormCustomSelect"><%= ocMessages.pages.questionnaire.translation_5 %></label>
-            <select class="custom-select mr-sm-2" name="question6" id="inlineFormCustomSelect">
+            <select class="custom-select mr-sm-2" name="question7" id="inlineFormCustomSelect">
                 <option selected>Choose...</option>
                 <option value="1">Yes</option>
                 <option value="2">No</option>
