@@ -18,12 +18,14 @@ body{
     background-color: var(--oc-alt-bg-color);
     margin: 0 0;
 }
-.form-control {
+;.form-control {
     border: 0px solid;
     border-bottom:1px solid;
     border-bottom-color: var(--oc-green);
 }
-
+.btn:hover{
+background-color: var(--oc-green);
+}
 .btn-outline-primary{
     border-color: var(--oc-green);
     color: var(--oc-green);
