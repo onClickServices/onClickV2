@@ -12,3 +12,7 @@
 .card-body {
     background: var(--oc-light-grey);
 }
+
+.services {
+    background: var(--oc-alt-bg-color);
+}
