@@ -14,7 +14,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: var(--oc-alt-bg-color);
+    background-color: var(--oc-black);
     overflow: hidden;
 }
 .welcome-section .content-wrap {
@@ -34,7 +34,7 @@ body {
 .welcome-section .content-wrap .fly-in-text li {
     display: inline-block;
     margin-right: 30px;
-    font-size: 5em;
+    font-size: 4.5em;
     color: #fff;
     opacity: 1;
     transition: all 2s ease;
@@ -45,7 +45,7 @@ body {
 .welcome-section .content-wrap .enter-button {
     display: block;
     text-align: center;
-    font-size: 1em;
+    font-size: 2.25em;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--oc-green);
@@ -64,7 +64,7 @@ body {
 .welcome-section.content-hidden .content-wrap .fly-in-text li:nth-child(8) { transform: translate3d(-100px, 0, 0); }
 .welcome-section.content-hidden .content-wrap .enter-button { opacity: 0; transform: translate3d(0, -30px, 0); }
 
-@media (min-width: 800px) {
-    .welcome-section .content-wrap .fly-in-text li { font-size: 2em; }
-    .welcome-section .content-wrap .enter-button { font-size: 1.5em; }
-}
+/*@media (min-width: 600px) {*/
+    /*.welcome-section .content-wrap .fly-in-text li { font-size: 2em; }*/
+    /*.welcome-section .content-wrap .enter-button { font-size: 1.5em; }*/
+/*}*/
