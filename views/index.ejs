@@ -8,22 +8,28 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
       integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <!-- Sccripts -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
 
 
 </head>
-<title><%=ocMessages.pages.site.title.translation_0%></title> <!-- onClick | Home -->
+<title><%= ocMessages.pages.site.title.translation_0 %></title> <!-- onClick | Home -->
 <body>
 
-    <% include ./partials/navbar.ejs %>
-    <% include ./partials/jumbotron.ejs %>
+<% include ./partials/navbar.ejs %>
+<% include ./partials/jumbotron.ejs %>
 
-    <!-- Main content here --> 
+<!-- Main content here -->
 <div class="container-fluid d-lg-flex d-md-inline-flex d-sm-block mx-0 my-4 px-5">
 
-<!-- added container so text stays within margins for mobile 6/8/2018 Byron B -->
+    <!-- added container so text stays within margins for mobile 6/8/2018 Byron B -->
     <section class="whoWhatHow d-lg-flex d-md-inline-flex d-sm-block mx-0 my-4 px-5 py-5 bg-light">
 
         <div class="whoAreWe col-lg-4 col-md-3 col-sm-1 d-block oc-border-right">
@@ -39,8 +45,8 @@
                 <i class="fas fa-globe fa-5x float-left p-2"></i>
                 <h1 class="my-4 p-2 d-block"><%= ocMessages.pages.homePage.translation_3 %></h1> <!-- What We Do -->
             </div>
-                <p class="m-3"><%= ocMessages.pages.homePage.translation_4 %></p> <!-- Whatever your brand needs... -->
-       <div class="oc-border-right "></div>
+            <p class="m-3"><%= ocMessages.pages.homePage.translation_4 %></p> <!-- Whatever your brand needs... -->
+            <div class="oc-border-right "></div>
         </div>
 
         <div class="whatWeDo col-lg-4 col-md-3 col-sm-1 d-block ml-2">
@@ -54,5 +60,5 @@
     </section>
     <!-- End main content -->
 </div>
-    <% include ./partials/footer.ejs %>
+<% include ./partials/footer.ejs %>
 </body>

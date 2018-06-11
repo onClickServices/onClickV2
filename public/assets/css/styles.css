@@ -119,7 +119,8 @@ border-bottom: 8px solid var(--oc-alt-green);
 .oc-border-right {
     border-right: 1px solid var(--oc-green);
 }
-    /* End of homepage styling */
+
+   /* End of homepage styling */
 
 /* Footer styling */
 /*Added text-align property to center icons and text in footer*/
