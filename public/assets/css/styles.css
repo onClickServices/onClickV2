@@ -176,4 +176,10 @@ footer .icons{
         color: var(--oc-green);
     }
 }
+
+@media only screen and (max-width:600px) {
+    .oc-border-right {
+        border-right: transparent;
+    }
+}
 /* End of home screen media queries */

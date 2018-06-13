@@ -43,9 +43,6 @@
 
     <!-- Editor -->
     <script src="//cdn.ckeditor.com/4.9.2/full/ckeditor.js"></script>
-    <script>
-        CKEDITOR.replace('editor1');
-    </script>
 
 </head>
 <% include partials/navbar.ejs %>
@@ -53,10 +50,8 @@
 
 <body>
 
-<form>
-
-
-    <div class="container questionnaireForm">
+<div class="container">
+    <form action="/questionnaire" method="post" id="questionnairePage" class="form">
 
         <!--Title for page-->
         <div class="services px-3 py-3 pt-md-5 pb-md-4 mt-3 mx-auto text-center">
@@ -68,10 +63,13 @@
         <div class="form-group questionnaire1">
             <label for="formGroupExampleInput"
                    class="animated fadeIn"><%= ocMessages.pages.questionnaire.translation_0 %></label>
-            <input type="text" class="form-control" name="question1" id="formGroupExampleInput" placeholder="">
+            <input type="text" class="form-control" name="formQuestion1" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="form-group">
             <label for="formGroupExampleInput"
                    class="animated fadeIn"><%= ocMessages.pages.questionnaire.translation_1 %></label>
-            <input type="text" class="form-control" name="question2" id="formGroupExampleInput" placeholder="">
+            <input type="text" class="form-control" name="formQuestion2" id="formGroupExampleInput" placeholder="">
         </div>
 
         <!--questionnaire 3 -->
@@ -79,7 +77,8 @@
             <div class="form-group">
                 <label for="exampleFormControlTextarea1"
                        class="animated fadeIn"><%= ocMessages.pages.questionnaire.translation_2 %></label>
-                <textarea class="form-control" name="question3" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" name="formQuestion3" id="exampleFormControlTextarea1"
+                          rows="3"></textarea>
             </div>
         </div>
 
@@ -88,7 +87,8 @@
             <div class="form-group">
                 <label for="exampleFormControlTextarea1"
                        class="animated fadeIn"><%= ocMessages.pages.questionnaire.translation_9 %></label>
-                <textarea class="form-control" name="question4" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" name="formQuestion4" id="exampleFormControlTextarea1"
+                          rows="3"></textarea>
             </div>
         </div>
 
@@ -97,7 +97,8 @@
             <div class="form-group">
                 <label for="exampleFormControlTextarea1"
                        class="animated fadeIn"><%= ocMessages.pages.questionnaire.translation_3 %></label>
-                <textarea class="form-control" name="question5" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" name="formQuestion5" id="exampleFormControlTextarea1"
+                          rows="3"></textarea>
             </div>
         </div>
 
@@ -106,7 +107,7 @@
             <div class="col-auto my-1">
                 <label class="mr-sm-2"
                        for="inlineFormCustomSelect"><%= ocMessages.pages.questionnaire.translation_4 %></label>
-                <select class="custom-select mr-sm-2" name="question6" id="inlineFormCustomSelect">
+                <select class="custom-select mr-sm-2" name="formQuestion6" id="inlineFormCustomSelect">
                     <option selected>Choose...</option>
                     <option value="1">Yes</option>
                     <option value="2">No</option>
@@ -114,7 +115,7 @@
 
                 <label class="mr-sm-2"
                        for="inlineFormCustomSelect"><%= ocMessages.pages.questionnaire.translation_5 %></label>
-                <select class="custom-select mr-sm-2" name="question7" id="inlineFormCustomSelect">
+                <select class="custom-select mr-sm-2" name="formQuestion7" id="inlineFormCustomSelect">
                     <option selected>Choose...</option>
                     <option value="1">Yes</option>
                     <option value="2">No</option>
@@ -128,18 +129,14 @@
                 <label class="control-label "
                        for="date"><%= ocMessages.pages.questionnaire.translation_6 %>
                 </label>
-                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
-            </div>
-            <div class="form-group">
-                <div>
-                    <button class="btn btn-success btn-lg pull-right" name="submit" type="submit">
-                        Send!
-                    </button>
-                </div>
+                <input class="form-control" id="date" placeholder="MM/DD/YYYY" type="text" name="date"/>
             </div>
         </div>
-    </div>
-</form>
+        <div class="form-group fieldset">
+            <button class="btn btn-primary" type="submit"><%= ocMessages.buttons.translation_1 %></button>
+        </div>
+    </form>
+</div>
 
 <% include partials/footer.ejs %>
 <!-- Extra JavaScript/CSS added manually in "Settings" tab -->
