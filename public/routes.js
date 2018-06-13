@@ -159,29 +159,6 @@ router.get('/questionnaire', (req, res) => {
     });
 });
 
-router.post('/contact', (req, res) => {
-    // New user schema from lib/models/user.js
-    let user = new User();
-    user.firstName = req.body.firstName;
-    user.lastName = req.body.lastName;
-    user.phone = req.body.phone;
-    user.email = req.body.email;
-    user.message = req.body.message;
-    // Save the user
-    user.save((err) => {
-        // Check for error
-        if (err) {
-            // If there is an error redirect user to the error page
-            console.log("this is the user: " + user);
-            // Send them to error page
-            res.redirect('/error');
-        } else {
-            // If no error while saving the user redirect them to the thank you page
-            res.redirect('/questionnaire');
-        }
-    });
-});
-
 // Grab and post contact information
 router.post('/questionnaire', (req, res) => {
     // New user schema from lib/models/user.js
