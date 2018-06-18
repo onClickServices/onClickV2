@@ -116,7 +116,6 @@ router.get('/services', (req, res) => {
             ocMessages.pages.servicePage.translation_19,
             ocMessages.pages.servicePage.translation_20,
             ocMessages.pages.servicePage.translation_21,
-            ocMessages.pages.servicePage.translation_21,
     ];
     let cardBodyThree = [
             ocMessages.pages.servicePage.translation_13,
